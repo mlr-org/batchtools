@@ -71,14 +71,25 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="batchtools">batchtools<a class="anchor" aria-label="anchor" href="#batchtools"></a>
 </h1></div>
-<p><a href="https://doi.org/10.21105/joss.00135" class="external-link"><img src="https://joss.theoj.org/papers/10.21105/joss.00135/status.svg" alt="JOSS Publicatoin"></a> <a href="https://cran.r-project.org/package=batchtools" class="external-link"><img src="https://www.r-pkg.org/badges/version/batchtools" alt="CRAN Status Badge"></a></p>
-<p>As a successor of the packages <a href="https://github.com/tudo-r/BatchJobs" class="external-link">BatchJobs</a> and <a href="https://github.com/tudo-r/Batchexperiments" class="external-link">BatchExperiments</a>, batchtools provides a parallel implementation of Map for high performance computing systems managed by schedulers like Slurm, Sun Grid Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker Swarm (see the setup section in the <a href="https://mllg.github.io/batchtools/articles/batchtools.html" class="external-link">vignette</a>).</p>
+<p>Package website: <a href="https://batchtools.mlr-org.com/">release</a> | <a href="https://batchtools.mlr-org.com/dev/">dev</a></p>
+<!-- badges: start -->
+
+<p>As a successor of the packages <a href="https://github.com/tudo-r/BatchJobs" class="external-link">BatchJobs</a> and <a href="https://github.com/tudo-r/Batchexperiments" class="external-link">BatchExperiments</a>, batchtools provides a parallel implementation of Map for high performance computing systems managed by schedulers like Slurm, Sun Grid Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker Swarm (see the setup section in the <a href="https://batchtools.mlr-org.com/batchtools/articles/batchtools.html">vignette</a>).</p>
 <p>Main features: * Convenience: All relevant batch system operations (submitting, listing, killing) are either handled internally or abstracted via simple R functions * Portability: With a well-defined interface, the source is independent from the underlying batch system - prototype locally, deploy on any high performance cluster * Reproducibility: Every computational part has an associated seed stored in a data base which ensures reproducibility even when the underlying batch system changes * Abstraction: The code layers for algorithms, experiment definitions and execution are cleanly separated and allow to write readable and maintainable code to manage large scale computer experiments</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Install the stable version from CRAN: <code>{R} install.packages("batchtools")</code> For the development version, use <a href="https://cran.r-project.org/package=devtools" class="external-link">devtools</a>: <code>{R} devtools::install_github("mllg/batchtools")</code></p>
-<p>Next, you need to setup <code>batchtools</code> for your HPC (it will run sequentially otherwise). See the <a href="https://mllg.github.io/batchtools/articles/batchtools.html#setup" class="external-link">vignette</a> for instructions.</p>
+<p>Install the stable version from CRAN:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"batchtools"</span><span class="op">)</span></span></code></pre></div>
+<p>For the development version, use <a href="https://cran.r-project.org/package=devtools" class="external-link">devtools</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"mlr-org/batchtools"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="do">## Skipping install of 'batchtools' from a github remote, the SHA1 (e4b9dacd) has not changed since last install.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="do">##   Use `force = TRUE` to force installation</span></span></code></pre></div>
+<p>Next, you need to setup <code>batchtools</code> for your HPC (it will run sequentially otherwise). See the <a href="https://mlr-org.github.io/batchtools/articles/batchtools.html#setup" class="external-link">vignette</a> for instructions.</p>
 </div>
 <div class="section level2">
 <h2 id="why-batchtools">Why batchtools?<a class="anchor" aria-label="anchor" href="#why-batchtools"></a>
@@ -88,37 +99,37 @@
 <li>Maintainability: The packages <a href="https://github.com/tudo-r/BatchJobs/" class="external-link">BatchJobs</a> and <a href="https://github.com/tudo-r/Batchexperiments" class="external-link">BatchExperiments</a> are tightly connected which makes maintenance difficult. Changes have to be synchronized and tested against the current CRAN versions for compatibility. Furthermore, BatchExperiments violates CRAN policies by calling internal functions of BatchJobs.</li>
 <li>Data base issues: Although we invested weeks to mitigate issues with locks of the SQLite data base or file system (staged queries, file system timeouts, …), <code>BatchJobs</code> kept working unreliable on some systems with high latency under certain conditions. This made <code>BatchJobs</code> unusable for many users.</li>
 </ul>
-<p><a href="https://github.com/tudo-r/BatchJobs/" class="external-link">BatchJobs</a> and <a href="https://github.com/tudo-r/Batchexperiments" class="external-link">BatchExperiments</a> will remain on CRAN, but new features are unlikely to be ported back. The <a href="https://mllg.github.io/batchtools/articles/batchtools.html#migration" class="external-link">vignette</a> contains a section comparing the packages.</p>
+<p><a href="https://github.com/tudo-r/BatchJobs/" class="external-link">BatchJobs</a> and <a href="https://github.com/tudo-r/Batchexperiments" class="external-link">BatchExperiments</a> will remain on CRAN, but new features are unlikely to be ported back. The <a href="https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration">vignette</a> contains a section comparing the packages.</p>
 </div>
 <div class="section level2">
 <h2 id="resources">Resources<a class="anchor" aria-label="anchor" href="#resources"></a>
 </h2>
 <ul>
-<li><a href="https://mllg.github.io/batchtools/news/" class="external-link">NEWS</a></li>
-<li><a href="https://mllg.github.io/batchtools/reference/" class="external-link">Function reference</a></li>
-<li><a href="https://mllg.github.io/batchtools/articles/batchtools.html" class="external-link">Vignette</a></li>
+<li><a href="https://batchtools.mlr-org.com/batchtools/news/">NEWS</a></li>
+<li><a href="https://batchtools.mlr-org.com/batchtools/reference/">Function reference</a></li>
+<li><a href="https://batchtools.mlr-org.com/batchtools/articles/batchtools.html">Vignette</a></li>
 <li>
 <a href="https://doi.org/10.21105/joss.00135" class="external-link">JOSS Paper</a>: Short paper on batchtools. Please cite this if you use batchtools.</li>
 <li>
-<a href="https://www.jstatsoft.org/v64/i11" class="external-link">Paper on BatchJobs/BatchExperiments</a>: The described concept still holds for batchtools and most examples work analogously (see the <a href="https://mllg.github.io/batchtools/articles/batchtools.html#migration" class="external-link">vignette</a> for differences between the packages).</li>
+<a href="https://www.jstatsoft.org/v64/i11" class="external-link">Paper on BatchJobs/BatchExperiments</a>: The described concept still holds for batchtools and most examples work analogously (see the <a href="https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration">vignette</a> for differences between the packages).</li>
 </ul>
 </div>
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <p>Please cite the <a href="https://doi.org/10.21105/joss.00135" class="external-link">JOSS paper</a> using the following BibTeX entry:</p>
-<pre><code>@article{,
-  doi = {10.21105/joss.00135},
-  url = {https://doi.org/10.21105/joss.00135},
-  year  = {2017},
-  month = {feb},
-  publisher = {The Open Journal},
-  volume = {2},
-  number = {10},
-  author = {Michel Lang and Bernd Bischl and Dirk Surmann},
-  title = {batchtools: Tools for R to work on batch systems},
-  journal = {The Journal of Open Source Software}
-}</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="sc">@</span>article{,</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  doi <span class="ot">=</span> {<span class="fl">10.21105</span><span class="sc">/</span>joss<span class="fl">.00135</span>},</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  url <span class="ot">=</span> {https<span class="sc">:</span><span class="er">//</span>doi.org<span class="sc">/</span><span class="fl">10.21105</span><span class="sc">/</span>joss<span class="fl">.00135</span>},</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  year  <span class="ot">=</span> {<span class="dv">2017</span>},</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  month <span class="ot">=</span> {feb},</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  publisher <span class="ot">=</span> {The Open Journal},</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  volume <span class="ot">=</span> {<span class="dv">2</span>},</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>  number <span class="ot">=</span> {<span class="dv">10</span>},</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>  author <span class="ot">=</span> {Michel Lang and Bernd Bischl and Dirk Surmann},</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>  title <span class="ot">=</span> {batchtools<span class="sc">:</span> Tools <span class="cf">for</span> R to work on batch systems},</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  journal <span class="ot">=</span> {The Journal of Open Source Software}</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="related-software">Related Software<a class="anchor" aria-label="anchor" href="#related-software"></a>
@@ -142,7 +153,7 @@
 <div class="section level2">
 <h2 id="contributing-to-batchtools">Contributing to batchtools<a class="anchor" aria-label="anchor" href="#contributing-to-batchtools"></a>
 </h2>
-<p>This R package is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html" class="external-link">LGPL-3</a>. If you encounter problems using this software (lack of documentation, misleading or wrong documentation, unexpected behaviour, bugs, …) or just want to suggest features, please open an issue in the <a href="https://github.com/mllg/batchtools/issues" class="external-link">issue tracker</a>. Pull requests are welcome and will be included at the discretion of the author. If you have customized a template file for your (larger) computing site, please share it: fork the repository, place your template in <code>inst/templates</code> and send a pull request.</p>
+<p>This R package is licensed under the <a href="https://www.gnu.org/licenses/lgpl-3.0.en.html" class="external-link">LGPL-3</a>. If you encounter problems using this software (lack of documentation, misleading or wrong documentation, unexpected behaviour, bugs, …) or just want to suggest features, please open an issue in the <a href="https://github.com/mlr-org/batchtools/issues" class="external-link">issue tracker</a>. Pull requests are welcome and will be included at the discretion of the author. If you have customized a template file for your (larger) computing site, please share it: fork the repository, place your template in <code>inst/templates</code> and send a pull request.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -178,7 +189,15 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://doi.org/10.21105/joss.00135" class="external-link"><img src="https://joss.theoj.org/papers/10.21105/joss.00135/status.svg" alt="JOSS Publication"></a></li>
+<li><a href="https://github.com/mlr-org/batchtools/actions/workflows/r-cmd-check.yml" class="external-link"><img src="https://github.com/mlr-org/batchtools/actions/workflows/r-cmd-check.yml/badge.svg" alt="r-cmd-check"></a></li>
+<li><a href="https://cran.r-project.org/package=batchtools" class="external-link"><img src="https://www.r-pkg.org/badges/version-ago/batchtools" alt="CRAN Status"></a></li>
+<li><a href="https://lmmisld-lmu-stats-slds.srv.mwn.de/mlr_invite/" class="external-link"><img src="https://img.shields.io/badge/chat-mattermost-orange.svg" alt="Mattermost"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
