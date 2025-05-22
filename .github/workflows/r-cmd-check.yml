@@ -50,6 +50,11 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
 
+      - name: Install OpenMPI (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          brew install open-mpi
+
       - name: Install system dependencies
         if: runner.os == 'Linux'
         run: |
