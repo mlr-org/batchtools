@@ -23,17 +23,20 @@ Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker
 Swarm (see the setup section in the
 [vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)).
 
-Main features: \* Convenience: All relevant batch system operations
-(submitting, listing, killing) are either handled internally or
-abstracted via simple R functions \* Portability: With a well-defined
-interface, the source is independent from the underlying batch system -
-prototype locally, deploy on any high performance cluster \*
-Reproducibility: Every computational part has an associated seed stored
-in a data base which ensures reproducibility even when the underlying
-batch system changes \* Abstraction: The code layers for algorithms,
-experiment definitions and execution are cleanly separated and allow to
-write readable and maintainable code to manage large scale computer
-experiments
+Main features:
+
+- Convenience: All relevant batch system operations (submitting,
+  listing, killing) are either handled internally or abstracted via
+  simple R functions
+- Portability: With a well-defined interface, the source is independent
+  from the underlying batch system - prototype locally, deploy on any
+  high performance cluster
+- Reproducibility: Every computational part has an associated seed
+  stored in a data base which ensures reproducibility even when the
+  underlying batch system changes
+- Abstraction: The code layers for algorithms, experiment definitions
+  and execution are cleanly separated and allow to write readable and
+  maintainable code to manage large scale computer experiments
 
 ## Installation
 
@@ -49,11 +52,6 @@ For the development version, use
 ``` r
 devtools::install_github("mlr-org/batchtools")
 ```
-
-    ## Using github PAT from envvar GITHUB_PAT. Use `gitcreds::gitcreds_set()` and unset GITHUB_PAT in .Renviron (or elsewhere) if you want to use the more secure git credential store instead.
-
-    ## Skipping install of 'batchtools' from a github remote, the SHA1 (e4b9dacd) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
 
 Next, you need to setup `batchtools` for your HPC (it will run
 sequentially otherwise). See the
@@ -88,7 +86,8 @@ contains a section comparing the packages.
 ## Resources
 
 - [NEWS](https://batchtools.mlr-org.com/batchtools/news/)
-- [Function reference](https://batchtools.mlr-org.com/batchtools/reference/)
+- [Function
+  reference](https://batchtools.mlr-org.com/batchtools/reference/)
 - [Vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)
 - [JOSS Paper](https://doi.org/10.21105/joss.00135): Short paper on
   batchtools. Please cite this if you use batchtools.
