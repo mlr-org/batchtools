@@ -60,6 +60,7 @@ containers manually (or usa a cron job).
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
@@ -68,7 +69,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},
 \code{\link{makeClusterFunctionsSocket}()},
-\code{\link{makeClusterFunctionsTORQUE}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsTORQUE}()}
 }
 \concept{ClusterFunctions}

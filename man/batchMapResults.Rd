@@ -73,7 +73,7 @@ ijoin(results, unwrap(reduceResultsDataTable(reg = tmp)), by = c(".id" = "job.id
 \seealso{
 Other Results: 
 \code{\link{loadResult}()},
-\code{\link{reduceResultsList}()},
-\code{\link{reduceResults}()}
+\code{\link{reduceResults}()},
+\code{\link{reduceResultsList}()}
 }
 \concept{Results}

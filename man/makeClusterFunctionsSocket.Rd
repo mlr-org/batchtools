@@ -26,6 +26,7 @@ Jobs are spawned asynchronously using the package \pkg{snow}.
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
@@ -34,7 +35,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSGE}()},
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},
-\code{\link{makeClusterFunctionsTORQUE}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsTORQUE}()}
 }
 \concept{ClusterFunctions}

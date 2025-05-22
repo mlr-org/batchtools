@@ -67,6 +67,7 @@ otherwise the commands for listing and killing jobs will not work.
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
@@ -75,7 +76,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSGE}()},
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSocket}()},
-\code{\link{makeClusterFunctionsTORQUE}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsTORQUE}()}
 }
 \concept{ClusterFunctions}

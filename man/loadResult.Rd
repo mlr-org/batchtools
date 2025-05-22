@@ -23,7 +23,7 @@ Loads the result of a single job.
 \seealso{
 Other Results: 
 \code{\link{batchMapResults}()},
-\code{\link{reduceResultsList}()},
-\code{\link{reduceResults}()}
+\code{\link{reduceResults}()},
+\code{\link{reduceResultsList}()}
 }
 \concept{Results}

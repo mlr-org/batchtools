@@ -30,8 +30,9 @@ loading \pkg{batchtools}.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/mllg/batchtools}
-  \item Report bugs at \url{https://github.com/mllg/batchtools/issues}
+  \item \url{https://github.com/mlr-org/batchtools}
+  \item \url{https://batchtools.mlr-org.com}
+  \item Report bugs at \url{https://github.com/mlr-org/batchtools/issues}
 }
 
 }

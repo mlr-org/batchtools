@@ -40,6 +40,7 @@ and \code{killJob} is not implemented for the same reasons.
 }
 \seealso{
 Other ClusterFunctions: 
+\code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
@@ -48,7 +49,6 @@ Other ClusterFunctions:
 \code{\link{makeClusterFunctionsSSH}()},
 \code{\link{makeClusterFunctionsSlurm}()},
 \code{\link{makeClusterFunctionsSocket}()},
-\code{\link{makeClusterFunctionsTORQUE}()},
-\code{\link{makeClusterFunctions}()}
+\code{\link{makeClusterFunctionsTORQUE}()}
 }
 \concept{ClusterFunctions}

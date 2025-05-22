@@ -28,7 +28,7 @@ Registry. If not explicitly passed, uses the last created registry.}
 [\code{Algorithm}]. Object of class \dQuote{Algorithm}.
 }
 \description{
-Algorithms are functions which get the code{data} part as well as the problem instance (the return value of the
+Algorithms are functions which get the \code{data} part as well as the problem instance (the return value of the
 function defined in \code{\link{Problem}}) and return an arbitrary R object.
 
 This function serializes all components to the file system and registers the algorithm in the \code{\link{ExperimentRegistry}}.
