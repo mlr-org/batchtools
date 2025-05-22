@@ -1,6 +1,6 @@
 #' @description
 #' For bug reports and feature requests please use the tracker:
-#' \url{https://github.com/mllg/batchtools}.
+#' \url{https://github.com/mlr-org/batchtools}.
 #'
 #' @section Package options:
 #' \describe{
