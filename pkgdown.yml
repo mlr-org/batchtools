@@ -1,0 +1,7 @@
+pandoc: 2.11.0.2
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  batchtools: batchtools.html
+last_built: 2020-10-21T07:39Z
+
