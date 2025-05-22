@@ -1,5 +1,5 @@
 # use list.files() here as this seems to trick the nfs cache
-# see https://github.com/mllg/batchtools/issues/85
+# see https://github.com/mlr-org/batchtools/issues/85
 waitForFiles = function(path, fns, timeout = 0) {
   if (timeout == 0)
     return(TRUE)
