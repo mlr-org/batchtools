@@ -26,7 +26,7 @@ bibliography: paper.bib
 
 # Summary
 
-The [`R`](https://www.r-project.org/) [@R] package [`batchtools`](https://github.com/mllg/batchtools) is the successor of the [`BatchJobs`](https://github.com/tudo-r/BatchJobs) package [@batchjobs_2015].
+The [`R`](https://www.r-project.org/) [@R] package [`batchtools`](https://github.com/mlr-org/batchtools) is the successor of the [`BatchJobs`](https://github.com/tudo-r/BatchJobs) package [@batchjobs_2015].
 It provides an implementation of a Map-like operation to define and asynchronously execute jobs on a variety of parallel backends:
 
 * Local (blocking) execution in the current `R` session or in an externally spawned `R` process (intended for debugging and prototyping)
