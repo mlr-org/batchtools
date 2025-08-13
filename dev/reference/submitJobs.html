@@ -263,7 +263,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu"><a href="waitForJobs.html">waitForJobs</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:01:23:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:04:48:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 10 ( 50.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 10 ( 50.0%)</span>
@@ -278,7 +278,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu">submitJobs</span><span class="op">(</span><span class="fu"><a href="findJobs.html">findErrors</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Submitting 5 jobs in 5 chunks using cluster functions 'Interactive' ...</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:01:23:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:04:49:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 10 ( 50.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 10 ( 50.0%)</span>
@@ -292,7 +292,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu">submitJobs</span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Submitting 10 jobs in 10 chunks using cluster functions 'Interactive' ...</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:01:24:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-08-13 20:04:49:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 20 (100.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 20 (100.0%)</span>
@@ -400,20 +400,20 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    job.id mem.used     n     p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt; &lt;num&gt; &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9141 1e+04    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9149 1e+04    50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9148 1e+05    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9152 1e+05    50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9147 1e+04    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9155 1e+04    50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9153 1e+05    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9157 1e+05    50</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Combine job info with results -&gt; each job is aggregated using mean()</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="unwrap.html">unwrap</a></span><span class="op">(</span><span class="fu"><a href="JoinTables.html">ijoin</a></span><span class="op">(</span><span class="va">info</span>, <span class="fu"><a href="reduceResultsList.html">reduceResultsDataTable</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">res</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>res <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    job.id mem.used     n     p       res</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt; &lt;num&gt; &lt;num&gt;     &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9141 1e+04    10 0.4974659</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9149 1e+04    50 0.4999527</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9148 1e+05    10 0.4996599</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9152 1e+05    50 0.5000197</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9147 1e+04    10 0.4974659</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9155 1e+04    50 0.4999527</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9153 1e+05    10 0.4996599</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9157 1e+05    50 0.5000197</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">### Example 3: Multicore execution on the slave</span></span></span>
 <span class="r-in"><span><span class="va">tmp</span> <span class="op">=</span> <span class="fu"><a href="makeRegistry.html">makeRegistry</a></span><span class="op">(</span>file.dir <span class="op">=</span> <span class="cn">NA</span>, make.default <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
