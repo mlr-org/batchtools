@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.2
+pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   batchtools: batchtools.html
-last_built: 2025-05-22T15:48Z
+last_built: 2025-08-13T20:00Z
 urls:
   reference: https://batchtools.mlr-org.com/reference
   article: https://batchtools.mlr-org.com/articles

@@ -261,13 +261,13 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-in"><span><span class="co"># Reduce the results of algorithm a1</span></span></span>
 <span class="r-in"><span><span class="va">ids.mean</span> <span class="op">=</span> <span class="fu"><a href="findJobs.html">findExperiments</a></span><span class="op">(</span>algo.name <span class="op">=</span> <span class="st">"a1"</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="reduceResults.html">reduceResults</a></span><span class="op">(</span><span class="va">ids.mean</span>, fun <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">aggr</span>, <span class="va">res</span>, <span class="va">...</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">aggr</span>, <span class="va">res</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -2.00073766 -1.83988515 -2.19491590 -1.88744748 -1.16661898 -1.01586977</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] -0.52913619 -0.63585094 -0.09331735  0.11880843  0.22120996  1.22939842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  1.00632897  1.26918801  2.11616673  1.81935795  1.90243597  1.93950861</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19]  2.33621891  2.81313094 -1.95745534 -2.29431806 -1.82269005 -1.80889629</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [25] -0.91933173 -1.03820621 -0.95531362 -1.49309041  0.09203207  0.05360571</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31]  0.04219920 -0.11534443  1.14488890  0.83504259  0.82821428  1.07835718</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [37]  2.06274541  2.28296085  2.26426388  1.74159301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -1.98469630 -2.06425842 -1.57829424 -1.54085458 -0.83801253 -1.03200064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] -0.83647536 -0.22817269  0.05267963  0.32063225  0.66292266 -0.84019695</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  0.76945500  1.50780734  0.75043834  0.46866849  2.03726918  2.33474808</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19]  2.52740967  0.94690547 -1.84481475 -1.93439574 -2.08432449 -1.74409243</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] -0.93044354 -0.86852550 -0.91917690 -0.99852013  0.06523844  0.23235414</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [31] -0.57542230 -0.51186562  1.03348915  0.96256306  0.86972725  1.11434707</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [37]  1.95386875  2.03545162  2.07137075  2.33586686</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Join info table with all results and calculate mean of results</span></span></span>
 <span class="r-in"><span><span class="co"># grouped by n and algorithm</span></span></span>
@@ -278,10 +278,10 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-in"><span><span class="va">tab</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>mres <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span><span class="op">)</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"n"</span>, <span class="st">"algorithm"</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        n algorithm        mres</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;num&gt;    &lt;char&gt;       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:    50        a1 0.270398674</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:   100        a1 0.001062847</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:    50        a2 0.068935673</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:   100        a2 0.020262158</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:    50        a1  0.07179872</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:   100        a1  0.01313478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:    50        a2  0.01729868</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:   100        a2 -0.07154361</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -293,7 +293,7 @@ Default is <code>TRUE</code>.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
