@@ -19,7 +19,7 @@
 #' @param more.args [\code{list}]\cr
 #'   A list of additional arguments passed to \code{fun}.
 #' @template reg
-#' @return [\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+#' @return [\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 #' @export
 #' @seealso \code{\link{batchMap}}
 #' @examples

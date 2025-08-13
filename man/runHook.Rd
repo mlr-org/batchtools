@@ -38,7 +38,7 @@ They can be specified via the \code{\link{ClusterFunctions}} and are triggered o
   \item{\code{pre.do.collection}}{\code{function(reg, reader, ...)}: Run before starting the job collection on the slave.
     \code{reader} is an internal cache object.}
   \item{\code{post.do.collection}}{\code{function(reg, updates, reader, ...)}: Run after all jobs in the chunk are terminated on the slave.
-    \code{updates} is a \code{\link{data.table}} of updates which will be merged with the \code{\link{Registry}} by the master.
+    \code{updates} is a \code{\link[data.table]{data.table}} of updates which will be merged with the \code{\link{Registry}} by the master.
     \code{reader} is an internal cache object.}
   \item{\code{pre.kill}}{\code{function(reg, ids, ...)}: Run before any job is killed.}
   \item{\code{post.kill}}{\code{function(reg, ids, ...)}: Run after jobs are killed. \code{ids} is the return value of \code{\link{killJobs}}.}

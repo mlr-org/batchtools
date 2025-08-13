@@ -33,7 +33,7 @@ If \code{FALSE} (default), \code{pattern} is a regular expression and a fixed st
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with columns \dQuote{job.id} and \dQuote{message}.
+[\code{\link[data.table]{data.table}}] with columns \dQuote{job.id} and \dQuote{message}.
 }
 \description{
 Crawls through log files and reports jobs with lines matching the \code{pattern}.

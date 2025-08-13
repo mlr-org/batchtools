@@ -34,7 +34,7 @@
 #'   in a cross-product fashion. Set to \dQuote{bind} to just \code{\link[base]{cbind}} the tables of
 #'   problem and algorithm designs where the shorter table is repeated if necessary.
 #' @template expreg
-#' @return [\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+#' @return [\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 #' @export
 #' @family Experiment
 #' @examples

@@ -9,7 +9,7 @@
 #'   Treat missing results as errors? If \code{TRUE}, the error message \dQuote{[not terminated]} is imputed
 #'   for jobs which have not terminated. Default is \code{FALSE}
 #' @template reg
-#' @return [\code{\link{data.table}}] with columns \dQuote{job.id}, \dQuote{terminated} (logical),
+#' @return [\code{\link[data.table]{data.table}}] with columns \dQuote{job.id}, \dQuote{terminated} (logical),
 #'   \dQuote{error} (logical) and \dQuote{message} (string).
 #' @family debug
 #' @export

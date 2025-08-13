@@ -14,7 +14,7 @@
 #'  \item{uri}{Location of the job description file (saved with \code{link[base]{saveRDS}} on the file system.}
 #'  \item{seed}{\code{integer(1)} Seed of the \link{Registry}.}
 #'  \item{packages}{\code{character} with required packages to load via \code{\link[base]{require}}.}
-#'  \item{namespaces}{code{character} with required packages to load via \code{\link[base]{requireNamespace}}.}
+#'  \item{namespaces}{\code{character} with required packages to load via \code{\link[base]{requireNamespace}}.}
 #'  \item{source}{\code{character} with list of files to source before execution.}
 #'  \item{load}{\code{character} with list of files to load before execution.}
 #'  \item{array.var}{\code{character(1)} of the array environment variable specified by the cluster functions.}

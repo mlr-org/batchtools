@@ -37,7 +37,7 @@ problem and algorithm designs where the shorter table is repeated if necessary.}
 Registry. If not explicitly passed, uses the last created registry.}
 }
 \value{
-[\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+[\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 }
 \description{
 Adds experiments (parametrized combinations of problems with algorithms) to the registry and thereby defines batch jobs.

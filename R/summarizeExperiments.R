@@ -9,7 +9,7 @@
 #' @param by [\code{character}]\cr
 #'   Split the resulting table by columns of \code{\link{getJobPars}}.
 #' @template expreg
-#' @return [\code{\link{data.table}}] of frequencies.
+#' @return [\code{\link[data.table]{data.table}}] of frequencies.
 #' @export
 #' @family Experiment
 summarizeExperiments = function(ids = NULL, by = c("problem", "algorithm"), reg = getDefaultRegistry()) {

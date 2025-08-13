@@ -39,7 +39,7 @@ Default is an empty list.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+[\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 }
 \description{
 A parallel and asynchronous \code{\link[base]{Map}}/\code{\link[base]{mapply}} for batch systems.

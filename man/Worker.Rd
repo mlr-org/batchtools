@@ -5,7 +5,7 @@
 \alias{Worker}
 \title{Create a Linux-Worker}
 \format{
-An \code{\link{R6Class}} generator object
+An \code{\link[R6]{R6Class}} generator object
 }
 \value{
 [\code{\link{Worker}}].

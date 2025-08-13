@@ -25,7 +25,7 @@ If you provide \code{sep}, the variable column name will be constructed as
 \dQuote{[column name of x][sep][inner name]}.}
 }
 \value{
-[\code{\link{data.table}}].
+[\code{\link[data.table]{data.table}}].
 }
 \description{
 Some functions (e.g., \code{\link{getJobPars}}, \code{\link{getJobResources}} or \code{\link{reduceResultsDataTable}}

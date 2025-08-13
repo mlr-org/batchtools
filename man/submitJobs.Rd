@@ -38,7 +38,7 @@ a function with exponential backoff between 5 and 120 seconds.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with columns \dQuote{job.id} and \dQuote{chunk}.
+[\code{\link[data.table]{data.table}}] with columns \dQuote{job.id} and \dQuote{chunk}.
 }
 \description{
 Submits defined jobs to the batch system.

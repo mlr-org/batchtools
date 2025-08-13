@@ -30,7 +30,7 @@ Invalid ids are ignored.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with the following columns (not necessarily in this order):
+[\code{\link[data.table]{data.table}}] with the following columns (not necessarily in this order):
   \describe{
     \item{job.id}{Unique Job ID as integer.}
     \item{submitted}{Time the job was submitted to the batch system as \code{\link[base]{POSIXct}}.}

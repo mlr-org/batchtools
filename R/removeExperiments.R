@@ -9,7 +9,7 @@
 #' @templateVar ids.default none
 #' @template ids
 #' @template expreg
-#' @return [\code{\link{data.table}}] of removed job ids, invisibly.
+#' @return [\code{\link[data.table]{data.table}}] of removed job ids, invisibly.
 #' @export
 #' @family Experiment
 removeExperiments = function(ids = NULL, reg = getDefaultRegistry()) {

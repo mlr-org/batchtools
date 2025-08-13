@@ -1,6 +1,6 @@
 #' @title Create a Linux-Worker
 #' @docType class
-#' @format An \code{\link{R6Class}} generator object
+#' @format An \code{\link[R6]{R6Class}} generator object
 #'
 #' @description
 #' \code{\link[R6]{R6Class}} to create local and remote linux workers.

@@ -19,7 +19,7 @@
 #'   Empty Registry where new jobs are created for.
 #' @param source [\code{\link{Registry}}]\cr
 #'   Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).
-#' @return [\code{\link{data.table}}] with ids of jobs added to \code{target}.
+#' @return [\code{\link[data.table]{data.table}}] with ids of jobs added to \code{target}.
 #' @export
 #' @family Results
 #' @examples
