@@ -10,4 +10,5 @@
 ^docs$
 ^paper$
 ^_pkgdown\.yml$
+^README.RMD$
 ^.github$

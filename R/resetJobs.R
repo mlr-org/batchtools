@@ -9,7 +9,7 @@
 #' @templateVar ids.default none
 #' @template ids
 #' @template reg
-#' @return [\code{\link{data.table}}] of job ids which have been reset.
+#' @return [\code{\link[data.table]{data.table}}] of job ids which have been reset.
 #'   See \code{\link{JoinTables}} for examples on working with job tables.
 #' @family debug
 #' @export
