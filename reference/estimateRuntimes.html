@@ -55,7 +55,7 @@ in a simple Longest Processing Time (LPT) algorithm to give an estimate for the 
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Estimate Remaining Runtimes</h1>
-      <small class="dont-index">Source: <a href="https://github.com/mlr-org/batchtools/blob/main/R/estimateRuntimes.R" class="external-link"><code>R/estimateRuntimes.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mlr-org/batchtools/blob/v0.9.18/R/estimateRuntimes.R" class="external-link"><code>R/estimateRuntimes.R</code></a></small>
       <div class="d-none name"><code>estimateRuntimes.Rd</code></div>
     </div>
 
@@ -172,7 +172,7 @@ Number of parallel jobs to assume for runtime estimation.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 496:    496    496         NA         NA         NA   &lt;NA&gt;       NA          NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 497:    497    497         NA         NA         NA   &lt;NA&gt;       NA          NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 498:    498    498         NA         NA         NA   &lt;NA&gt;       NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 499:    499    499 1755663194 1755663194 1755663694   &lt;NA&gt;       NA           1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499:    499    499 1755681747 1755681747 1755682247   &lt;NA&gt;       NA           1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 500:    500    500         NA         NA         NA   &lt;NA&gt;       NA          NA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           batch.id log.file                            job.hash job.name  repl</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             &lt;char&gt;   &lt;char&gt;                              &lt;char&gt;   &lt;char&gt; &lt;int&gt;</span>
@@ -185,62 +185,62 @@ Number of parallel jobs to assume for runtime estimation.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 496:          &lt;NA&gt;     &lt;NA&gt;                                &lt;NA&gt;     &lt;NA&gt;     1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 497:          &lt;NA&gt;     &lt;NA&gt;                                &lt;NA&gt;     &lt;NA&gt;     1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 498:          &lt;NA&gt;     &lt;NA&gt;                                &lt;NA&gt;     &lt;NA&gt;     1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 499: cfInteractive     &lt;NA&gt; jobc6828a86875c854ea4dcd1a813ea9bfb     &lt;NA&gt;     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499: cfInteractive     &lt;NA&gt; job5af85cb44724cbffc9d33af5cfa4c77d     &lt;NA&gt;     1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 500:          &lt;NA&gt;     &lt;NA&gt;                                &lt;NA&gt;     &lt;NA&gt;     1</span>
 <span class="r-in"><span><span class="fu"><a href="JoinTables.html">rjoin</a></span><span class="op">(</span><span class="fu"><a href="JoinTables.html">sjoin</a></span><span class="op">(</span><span class="va">tab</span>, <span class="va">ids</span><span class="op">)</span>, <span class="fu"><a href="getJobTable.html">getJobStatus</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"job.id"</span>, <span class="st">"time.running"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     job.id problem algorithm     x      y   time.running</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      &lt;int&gt;  &lt;char&gt;    &lt;char&gt; &lt;int&gt; &lt;char&gt;     &lt;difftime&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1:     32    iris      nrow     7      b 1100.0337 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  2:     42    iris      nrow     9      b 1100.0375 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3:     47    iris      nrow    10      b 1100.0336 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4:     66    iris      nrow    14      a 1100.0344 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5:     73    iris      nrow    15      c  100.0336 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  6:     75    iris      nrow    15      e  100.0336 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  7:     86    iris      nrow    18      a 1100.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  8:    100    iris      nrow    20      e  100.0372 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  9:    101    iris      nrow    21      a 1100.0341 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10:    103    iris      nrow    21      c  100.0344 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11:    123    iris      nrow    25      c  100.0347 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12:    125    iris      nrow    25      e  100.0339 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13:    161    iris      nrow    33      a 1100.0331 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14:    165    iris      nrow    33      e  100.0339 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15:    169    iris      nrow    34      d  100.0344 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16:    183    iris      nrow    37      c  100.0337 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17:    184    iris      nrow    37      d  100.0334 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18:    203    iris      nrow    41      c  100.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19:    207    iris      nrow    42      b 1100.0338 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20:    209    iris      nrow    42      d  100.0343 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21:    220    iris      nrow    44      e  100.0340 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1:     32    iris      nrow     7      b 1100.0341 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2:     42    iris      nrow     9      b 1100.0341 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3:     47    iris      nrow    10      b 1100.0338 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4:     66    iris      nrow    14      a 1100.0342 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5:     73    iris      nrow    15      c  100.0331 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6:     75    iris      nrow    15      e  100.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  7:     86    iris      nrow    18      a 1100.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  8:    100    iris      nrow    20      e  100.0344 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  9:    101    iris      nrow    21      a 1100.0336 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10:    103    iris      nrow    21      c  100.0342 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11:    123    iris      nrow    25      c  100.0330 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12:    125    iris      nrow    25      e  100.0328 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13:    161    iris      nrow    33      a 1100.0365 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14:    165    iris      nrow    33      e  100.0341 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15:    169    iris      nrow    34      d  100.0340 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16:    183    iris      nrow    37      c  100.0339 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17:    184    iris      nrow    37      d  100.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18:    203    iris      nrow    41      c  100.0327 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19:    207    iris      nrow    42      b 1100.0373 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20:    209    iris      nrow    42      d  100.0337 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21:    220    iris      nrow    44      e  100.0342 secs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 22:    227    iris      nrow    46      b 1100.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23:    229    iris      nrow    46      d  100.0333 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24:    231    iris      nrow    47      a 1100.0378 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25:    244    iris      nrow    49      d  100.0344 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26:    260    iris      ncol     2      e  500.0346 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27:    276    iris      ncol     6      a 1500.0335 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28:    278    iris      ncol     6      c  500.0337 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29:    279    iris      ncol     6      d  500.0368 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30:    296    iris      ncol    10      a 1500.0345 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31:    320    iris      ncol    14      e  500.0347 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32:    340    iris      ncol    18      e  500.0334 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33:    347    iris      ncol    20      b 1500.0348 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    363    iris      ncol    23      c  500.0375 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35:    369    iris      ncol    24      d  500.0345 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36:    373    iris      ncol    25      c  500.0340 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37:    387    iris      ncol    28      b 1500.0332 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23:    229    iris      nrow    46      d  100.0330 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24:    231    iris      nrow    47      a 1100.0330 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25:    244    iris      nrow    49      d  100.0350 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26:    260    iris      ncol     2      e  500.0336 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27:    276    iris      ncol     6      a 1500.0339 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28:    278    iris      ncol     6      c  500.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29:    279    iris      ncol     6      d  500.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30:    296    iris      ncol    10      a 1500.0342 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31:    320    iris      ncol    14      e  500.0340 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32:    340    iris      ncol    18      e  500.0345 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33:    347    iris      ncol    20      b 1500.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    363    iris      ncol    23      c  500.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35:    369    iris      ncol    24      d  500.0370 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36:    373    iris      ncol    25      c  500.0353 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37:    387    iris      ncol    28      b 1500.0343 secs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 38:    410    iris      ncol    32      e  500.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39:    421    iris      ncol    35      a 1500.0582 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40:    436    iris      ncol    38      a 1500.0344 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41:    444    iris      ncol    39      d  500.0336 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42:    448    iris      ncol    40      c  500.0335 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39:    421    iris      ncol    35      a 1500.0327 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40:    436    iris      ncol    38      a 1500.0365 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41:    444    iris      ncol    39      d  500.0365 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42:    448    iris      ncol    40      c  500.0343 secs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 43:    456    iris      ncol    42      a 1500.0331 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44:    459    iris      ncol    42      d  500.0333 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45:    467    iris      ncol    44      b 1500.0391 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46:    468    iris      ncol    44      c  500.0345 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47:    475    iris      ncol    45      e  500.0334 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48:    482    iris      ncol    47      b 1500.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49:    492    iris      ncol    49      b 1500.0332 secs</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50:    499    iris      ncol    50      d  500.0331 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44:    459    iris      ncol    42      d  500.0330 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45:    467    iris      ncol    44      b 1500.0547 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46:    468    iris      ncol    44      c  500.0348 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47:    475    iris      ncol    45      e  500.0336 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48:    482    iris      ncol    47      b 1500.0329 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49:    492    iris      ncol    49      b 1500.0330 secs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50:    499    iris      ncol    50      d  500.0332 secs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     job.id problem algorithm     x      y   time.running</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Estimate runtimes:</span></span></span>
@@ -248,46 +248,46 @@ Number of parallel jobs to assume for runtime estimation.</p></dd>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">est</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Runtime Estimate for 500 jobs with 1 CPUs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Done     : 0d 09h 43m 21.7s</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Remaining: 3d 17h 38m 20.1s</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Total    : 4d 03h 21m 41.8s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Remaining: 3d 17h 38m 27.5s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Total    : 4d 03h 21m 49.2s</span>
 <span class="r-in"><span><span class="fu"><a href="JoinTables.html">rjoin</a></span><span class="op">(</span><span class="va">tab</span>, <span class="va">est</span><span class="op">$</span><span class="va">runtimes</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      job.id problem algorithm     x      y      type   runtime</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;  &lt;char&gt;    &lt;char&gt; &lt;int&gt; &lt;char&gt;    &lt;fctr&gt;     &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1    iris      nrow     1      a estimated 1106.8484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2    iris      nrow     1      b estimated 1090.6428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3    iris      nrow     1      c estimated  337.8011</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4    iris      nrow     1      d estimated  319.8669</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5    iris      nrow     1      e estimated  318.8443</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1    iris      nrow     1      a estimated 1106.8478</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2    iris      nrow     1      b estimated 1090.8022</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3    iris      nrow     1      c estimated  337.8401</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4    iris      nrow     1      d estimated  318.5059</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5    iris      nrow     1      e estimated  318.5499</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                                          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 496:    496    iris      ncol    50      a estimated 1381.8755</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 497:    497    iris      ncol    50      b estimated 1388.7636</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 498:    498    iris      ncol    50      c estimated  613.6564</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 499:    499    iris      ncol    50      d  observed  500.0331</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 500:    500    iris      ncol    50      e estimated  574.4083</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 496:    496    iris      ncol    50      a estimated 1381.0745</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 497:    497    iris      ncol    50      b estimated 1387.9654</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 498:    498    iris      ncol    50      c estimated  614.6164</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 499:    499    iris      ncol    50      d  observed  500.0332</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 500:    500    iris      ncol    50      e estimated  574.8083</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">est</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Runtime Estimate for 500 jobs with 10 CPUs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Done     : 0d 09h 43m 21.7s</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Remaining: 3d 17h 38m 20.1s</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Parallel : 0d 08h 58m 30.7s</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Total    : 4d 03h 21m 41.8s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Remaining: 3d 17h 38m 27.5s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Parallel : 0d 08h 58m 29.4s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   Total    : 4d 03h 21m 49.2s</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Submit jobs with longest runtime first:</span></span></span>
 <span class="r-in"><span><span class="va">ids</span> <span class="op">=</span> <span class="va">est</span><span class="op">$</span><span class="va">runtimes</span><span class="op">[</span><span class="va">type</span> <span class="op">==</span> <span class="st">"estimated"</span><span class="op">]</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">runtime</span>, decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">ids</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      job.id      type   runtime</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;    &lt;fctr&gt;     &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:    466 estimated 1421.2536</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:    461 estimated 1419.8602</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:    462 estimated 1416.9576</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:    457 estimated 1416.1576</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:    487 estimated 1415.0825</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:    466 estimated 1423.2531</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:    461 estimated 1419.8582</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:    472 estimated 1417.1139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:    462 estimated 1416.9590</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:    457 estimated 1416.1590</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---                           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    164 estimated  133.4716</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    185 estimated  133.2011</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    204 estimated  131.3599</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    174 estimated  131.1216</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    179 estimated  129.9747</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    194 estimated  133.3099</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    185 estimated  132.9607</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    174 estimated  131.1211</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    204 estimated  130.3195</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    179 estimated  129.9743</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="submitJobs.html">submitJobs</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
@@ -298,126 +298,126 @@ Number of parallel jobs to assume for runtime estimation.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      job.id      type   runtime chunk</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;    &lt;fctr&gt;     &lt;num&gt; &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8484    47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.6428    51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8011    55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  319.8669    34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.8443    33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8478    47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.8022    51</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8401    54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  318.5059    69</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.5499    32</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  581.3429    17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.8755    21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1388.7636    16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  613.6564     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.4083    26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  582.5429    15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.0745    21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1387.9654    17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  614.6164     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.8083    26</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">ids</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      job.id      type   runtime chunk</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;    &lt;fctr&gt;     &lt;num&gt; &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8484    47</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.6428    51</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8011    55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  319.8669    34</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.8443    33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8478    47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.8022    51</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8401    54</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  318.5059    69</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.5499    32</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  581.3429    17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.8755    21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1388.7636    16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  613.6564     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.4083    26</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  582.5429    15</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.0745    21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1387.9654    17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  614.6164     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.8083    26</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">ids</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>runtime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">runtime</span><span class="op">)</span><span class="op">)</span>, by <span class="op">=</span> <span class="va">chunk</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     chunk  runtime</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1:    47 3493.576</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  2:    51 3596.538</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3:    55 3584.574</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4:    34 3594.434</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5:    33 3599.050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  6:    48 3491.168</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  7:    56 3574.205</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  8:    71 3489.797</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  9:    52 3599.461</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10:    57 3565.255</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11:    69 3496.045</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12:    72 3486.338</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13:    58 3554.750</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14:    70 3492.912</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15:    73 3481.019</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16:    46 3519.769</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17:    50 3599.821</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18:    38 3599.493</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19:    53 3594.271</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20:    65 3514.095</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21:    43 3571.550</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22:    64 3519.304</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23:    66 3509.111</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24:    39 3599.240</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25:    61 3532.802</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26:    63 3527.076</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27:    40 3597.300</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28:    54 3589.564</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29:    59 3546.855</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30:    49 3485.526</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31:    42 3582.916</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32:    37 3599.512</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33:    36 3599.919</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    41 3589.147</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35:    60 3536.414</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36:    62 3530.494</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37:    44 3541.805</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38:    35 3595.718</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39:    67 3508.291</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40:    45 3541.005</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41:    68 3504.843</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42:    28 3593.063</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43:    25 3596.877</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44:    26 3589.943</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45:    27 3596.720</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46:    24 3598.986</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47:    29 3570.900</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48:    74 3599.401</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49:    75 3599.705</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50:     6 3593.708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51:     9 3589.848</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52:    20 3522.276</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53:    21 3517.960</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54:     7 3599.680</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55:     5 3597.655</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56:    12 3564.405</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57:    11 3573.809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58:    10 3576.816</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59:    32 3599.515</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60:    80 3485.233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61:     2 3599.840</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62:    82 3598.911</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63:    79 3497.909</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64:    81 3477.174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65:    76 3592.495</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66:    86 3574.894</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67:    89 3549.162</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68:    91 2034.890</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69:    77 3522.541</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70:    88 3558.716</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71:    78 3506.438</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72:    83 3599.013</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73:    90 3523.913</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74:    84 3591.241</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75:    85 3584.727</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76:     1 3599.201</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77:    87 3568.732</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78:     4 3599.959</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79:     3 3599.391</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80:     8 3598.394</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81:    22 3599.200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82:    18 3575.743</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83:    13 3599.578</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84:    23 3594.549</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85:    19 3571.063</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86:    16 3587.625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87:    31 3550.371</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88:    17 3582.047</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89:    30 3566.450</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90:    15 3594.849</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91:    14 3599.618</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1:    47 3494.080</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2:    51 3597.429</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3:    54 3591.045</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4:    69 3498.425</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5:    32 3597.399</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6:    48 3491.006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  7:    52 3599.996</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  8:    55 3589.659</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  9:    70 3494.986</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10:    33 3596.556</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11:    56 3579.751</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12:    71 3492.356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13:    34 3593.020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14:    57 3571.296</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15:    72 3489.163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16:    46 3519.206</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17:    50 3599.309</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18:    38 3596.719</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19:    53 3595.735</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20:    35 3594.687</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21:    43 3564.789</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22:    65 3515.758</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23:    36 3593.596</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24:    42 3574.589</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25:    63 3529.568</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26:    62 3532.593</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27:    39 3596.573</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28:    59 3550.710</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29:    58 3560.229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30:    49 3486.985</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31:    41 3587.229</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32:    60 3539.632</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33:    64 3525.702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34:    40 3595.411</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35:    37 3599.172</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36:    61 3536.266</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37:    44 3535.875</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38:    66 3513.120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39:    45 3535.075</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40:    67 3509.344</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41:    68 3507.273</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42:    28 3592.495</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43:    25 3594.225</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44:    26 3589.899</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45:    27 3595.539</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46:    24 3597.866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47:    29 3570.517</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48:    75 3598.764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49:    20 3522.870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50:    74 3472.064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51:    10 3583.204</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52:    31 3599.119</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53:     6 3594.824</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54:     9 3590.023</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55:    12 3562.949</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56:     5 3598.228</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57:    11 3574.173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58:     7 3595.615</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 59:     4 3598.811</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 60:    81 3477.688</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 61:    83 3599.440</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 62:     3 3599.955</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 63:    82 3599.987</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 64:    73 3491.335</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 65:    79 3497.623</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 66:    80 3486.885</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 67:    76 3584.110</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 68:    87 3567.462</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 69:    91 2032.264</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 70:    77 3522.605</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 71:    89 3551.033</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 72:    88 3558.315</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 73:    78 3507.098</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 74:    84 3593.708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 75:     2 3599.786</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 76:    86 3576.357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 77:    90 3528.326</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 78:    85 3584.227</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 79:     1 3599.806</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 80:     8 3598.984</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 81:    22 3597.463</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 82:    18 3573.997</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 83:    13 3596.548</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 84:    30 3556.171</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 85:    19 3569.384</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 86:    16 3585.008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 87:    21 3597.847</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 88:    17 3579.601</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 89:    23 3599.390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 90:    14 3598.870</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 91:    15 3593.749</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     chunk  runtime</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="submitJobs.html">submitJobs</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
@@ -429,30 +429,30 @@ Number of parallel jobs to assume for runtime estimation.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>      job.id      type   runtime chunk</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       &lt;int&gt;    &lt;fctr&gt;     &lt;num&gt; &lt;int&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8484     3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.6428     1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8011    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  319.8669     6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.8443     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   1:      1 estimated 1106.8478     4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   2:      2 estimated 1090.8022    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   3:      3 estimated  337.8401     9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   4:      4 estimated  318.5059     1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   5:      5 estimated  318.5499     7</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  ---                                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  581.3429     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.8755     6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1388.7636     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  613.6564     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.4083     8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 446:    495 estimated  582.5429    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 447:    496 estimated 1381.0745     2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 448:    497 estimated 1387.9654     7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 449:    498 estimated  614.6164     5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 450:    500 estimated  574.8083     8</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">ids</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>runtime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">runtime</span><span class="op">)</span><span class="op">)</span>, by <span class="op">=</span> <span class="va">chunk</span><span class="op">]</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     chunk  runtime</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1:     3 32233.83</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  2:     1 32233.70</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3:    10 32234.06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  4:     6 32240.55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  5:     4 32296.37</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  6:     5 32310.58</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  7:     8 32310.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  8:     7 32233.75</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  9:     9 32296.56</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10:     2 32309.94</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  1:     4 32234.78</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  2:    10 32309.39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  3:     9 32235.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  4:     1 32309.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  5:     7 32240.06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  6:     3 32300.30</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  7:     8 32309.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  8:     6 32234.50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  9:     5 32234.59</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10:     2 32300.62</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
