@@ -67,6 +67,9 @@ makeClusterFunctionsSlurm = function(template = "slurm", array.jobs = TRUE, node
     }
 
     submitted = grep("^Submitted batch job", stri_split_fixed(output, '\n')[[1L]], value = TRUE)
+
+    print(submitted)
+    
     id = stri_split_fixed(submitted, " ")[[1L]][4L]
     if (jc$array.jobs) {
       if (!array.jobs)
