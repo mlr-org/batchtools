@@ -83,6 +83,7 @@ with the package.
 \seealso{
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},

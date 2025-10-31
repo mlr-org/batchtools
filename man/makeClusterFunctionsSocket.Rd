@@ -28,6 +28,7 @@ Jobs are spawned asynchronously using the package \pkg{snow}.
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},

@@ -29,6 +29,7 @@ Does not work on Windows, use \code{\link{makeClusterFunctionsSocket}} instead.
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsOpenLava}()},

@@ -61,6 +61,7 @@ containers manually (or usa a cron job).
 \seealso{
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},

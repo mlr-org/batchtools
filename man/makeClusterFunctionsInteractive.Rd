@@ -42,6 +42,7 @@ and \code{killJob} is not implemented for the same reasons.
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},
 \code{\link{makeClusterFunctionsOpenLava}()},

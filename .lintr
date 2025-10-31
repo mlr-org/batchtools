@@ -1,0 +1,19 @@
+linters: linters_with_defaults(
+    # lintr defaults: https://lintr.r-lib.org/reference/default_linters.html
+    # the following setup changes/removes certain linters
+    assignment_linter = NULL, # do not force using <- for assignments
+    object_name_linter(c("snake_case", "CamelCase")), # only allow snake case and camel case object names
+    commented_code_linter = NULL, # allow code in comments
+    line_length_linter(200L),
+    object_length_linter(40L),
+    undesirable_function_linter(fun = c(
+      # base messaging
+      cat = "use catf()",
+      stop = "use stopf()",
+      warning = "use warningf()",
+      message = "use messagef()",
+      # perf
+      ifelse = "use fifelse()",
+      rank = "use frank()"
+    ))
+  )
