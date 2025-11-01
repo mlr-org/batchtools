@@ -17,11 +17,14 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
     assertRegistry(reg, writeable = TRUE)
     assertClass(jc, "JobCollection")
 
+    ncpus = jc$resources$ncpus %??% 1L
+
     args = c(
       "submit",
       sprintf("--name=%s", jc$job.hash),
       "--stdout=none",
       "--stderr=none",
+      sprintf("--cpus=%i", ncpus),
       "--",
       "Rscript", "-e",
       shQuote(sprintf("batchtools::doJobCollection('%s', '%s')", jc$uri, jc$log.file))
