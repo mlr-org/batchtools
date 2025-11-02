@@ -46,7 +46,7 @@ test_that("clusterFunctionsHyperQueue with resources", {
     TRUE
   }
   ids = batchMap(fun, x = c(5, 5), reg = reg)
-  submitJobs(1:2, reg = reg, resources = list(ncpus = 2))
+  submitJobs(1:2, reg = reg, resources = list(ncpus = 2, walltime = 10, memory = 5))
   waitForJobs(ids = ids, reg = reg)
 
   expect_data_table(findJobs(ids = ids, reg = reg), nrow = 2)

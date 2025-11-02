@@ -17,14 +17,19 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
     assertRegistry(reg, writeable = TRUE)
     assertClass(jc, "JobCollection")
 
-    ncpus = jc$resources$ncpus %??% 1L
+    ncpus = if (!is.null(jc$resources$ncpus)) sprintf("--cpus=%i", jc$resources$ncpus)
+    memory = if (!is.null(jc$resources$memory)) sprintf("--resource mem=%iMiB", jc$resources$memory)
+    walltime =  if (!is.null(jc$resources$walltime)) sprintf("--time-limit=%is", jc$resources$walltime)
 
     args = c(
       "submit",
       sprintf("--name=%s", jc$job.hash),
+      # hyperqueue cannot write stdout and stderr to the same file
       "--stdout=none",
       "--stderr=none",
-      sprintf("--cpus=%i", ncpus),
+      ncpus,
+      memory,
+      walltime,
       "--",
       "Rscript", "-e",
       shQuote(sprintf("batchtools::doJobCollection('%s', '%s')", jc$uri, jc$log.file))
