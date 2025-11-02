@@ -55,6 +55,7 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
 
 
   listJobsQueued = function(reg) {
+    requireNamespace("jsonlite")
     assertRegistry(reg, writeable = FALSE)
     args = c("job", "list", "--filter", "waiting", "--output-mode", "json")
     res = runOSCommand("hq", args)
@@ -66,6 +67,7 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
   }
 
   listJobsRunning = function(reg) {
+    requireNamespace("jsonlite")
     assertRegistry(reg, writeable = FALSE)
     args = c("job", "list", "--filter", "running", "--output-mode", "json")
     res = runOSCommand("hq", args)

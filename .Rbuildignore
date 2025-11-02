@@ -13,3 +13,4 @@
 ^README.RMD$
 ^.github$
 registry/
+^\.lintr$
