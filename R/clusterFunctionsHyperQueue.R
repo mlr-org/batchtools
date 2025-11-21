@@ -8,6 +8,7 @@
 #' Listing jobs uses \code{hq job list} and cancelling jobs uses \code{hq job cancel}.
 #' A running HyperQueue server and workers are required.
 #'
+#'
 #' @inheritParams makeClusterFunctions
 #' @return [ClusterFunctions].
 #' @family ClusterFunctions
@@ -19,7 +20,9 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
 
     ncpus = if (!is.null(jc$resources$ncpus)) sprintf("--cpus=%i", jc$resources$ncpus)
     memory = if (!is.null(jc$resources$memory)) sprintf("--resource mem=%iMiB", jc$resources$memory)
-    walltime =  if (!is.null(jc$resources$walltime)) sprintf("--time-limit=%is", jc$resources$walltime)
+    # time-limit is the maximum time the job can run, time-request is the minimum remaining lifetime a worker must have
+    walltime =  if (!is.null(jc$resources$walltime)) sprintf("--time-limit=%is --time-request=%is", jc$resources$walltime, jc$resources$walltime)
+
 
     args = c(
       "submit",
