@@ -1,0 +1,352 @@
+# batchtools
+
+Package website: [release](https://batchtools.mlr-org.com/) \|
+[dev](https://batchtools.mlr-org.com/dev/)
+
+As a successor of the packages
+[BatchJobs](https://github.com/tudo-r/BatchJobs) and
+[BatchExperiments](https://github.com/tudo-r/Batchexperiments),
+batchtools provides a parallel implementation of Map for high
+performance computing systems managed by schedulers like Slurm, Sun Grid
+Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker
+Swarm (see the setup section in the
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html)).
+
+Main features:
+
+- Convenience: All relevant batch system operations (submitting,
+  listing, killing) are either handled internally or abstracted via
+  simple R functions
+- Portability: With a well-defined interface, the source is independent
+  from the underlying batch system - prototype locally, deploy on any
+  high performance cluster
+- Reproducibility: Every computational part has an associated seed
+  stored in a data base which ensures reproducibility even when the
+  underlying batch system changes
+- Abstraction: The code layers for algorithms, experiment definitions
+  and execution are cleanly separated and allow to write readable and
+  maintainable code to manage large scale computer experiments
+
+## Installation
+
+Install the stable version from CRAN:
+
+``` r
+install.packages("batchtools")
+```
+
+For the development version, use
+[devtools](https://cran.r-project.org/package=devtools):
+
+``` r
+devtools::install_github("mlr-org/batchtools")
+```
+
+Next, you need to setup `batchtools` for your HPC (it will run
+sequentially otherwise). See the
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html) for
+instructions.
+
+## Why batchtools?
+
+The development of [BatchJobs](https://github.com/tudo-r/BatchJobs/) and
+[BatchExperiments](https://github.com/tudo-r/Batchexperiments) is
+discontinued for the following reasons:
+
+- Maintainability: The packages
+  [BatchJobs](https://github.com/tudo-r/BatchJobs/) and
+  [BatchExperiments](https://github.com/tudo-r/Batchexperiments) are
+  tightly connected which makes maintenance difficult. Changes have to
+  be synchronized and tested against the current CRAN versions for
+  compatibility. Furthermore, BatchExperiments violates CRAN policies by
+  calling internal functions of BatchJobs.
+- Data base issues: Although we invested weeks to mitigate issues with
+  locks of the SQLite data base or file system (staged queries, file
+  system timeouts, …), `BatchJobs` kept working unreliable on some
+  systems with high latency under certain conditions. This made
+  `BatchJobs` unusable for many users.
+
+[BatchJobs](https://github.com/tudo-r/BatchJobs/) and
+[BatchExperiments](https://github.com/tudo-r/Batchexperiments) will
+remain on CRAN, but new features are unlikely to be ported back. The
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
+contains a section comparing the packages.
+
+## Resources
+
+- [Function reference](https://batchtools.mlr-org.com/reference/)
+- [Vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
+- [JOSS Paper](https://doi.org/10.21105/joss.00135): Short paper on
+  batchtools. Please cite this if you use batchtools.
+- [Paper on
+  BatchJobs/BatchExperiments](https://www.jstatsoft.org/v64/i11): The
+  described concept still holds for batchtools and most examples work
+  analogously (see the
+  [vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
+  for differences between the packages).
+
+## Citation
+
+Please cite the [JOSS paper](https://doi.org/10.21105/joss.00135) using
+the following BibTeX entry:
+
+``` R
+@article{,
+  doi = {10.21105/joss.00135},
+  url = {https://doi.org/10.21105/joss.00135},
+  year  = {2017},
+  month = {feb},
+  publisher = {The Open Journal},
+  volume = {2},
+  number = {10},
+  author = {Michel Lang and Bernd Bischl and Dirk Surmann},
+  title = {batchtools: Tools for R to work on batch systems},
+  journal = {The Journal of Open Source Software}
+}
+```
+
+## Related Software
+
+- The [High Performance Computing Task
+  View](https://cran.r-project.org/view=HighPerformanceComputing) lists
+  the most relevant packages for scientific computing with R.
+- [clustermq](https://cran.r-project.org/package=clustermq) is a similar
+  approach which also supports multiple schedulers. Uses the ZeroMQ
+  network protocol for communication, and shines if you have millions of
+  fast jobs.
+- [batch](https://cran.r-project.org/package=batch) assists in splitting
+  and submitting jobs to LSF and MOSIX clusters.
+- [flowr](https://cran.r-project.org/package=flowr) supports LSF, Slurm,
+  TORQUE and Moab and provides a scatter-gather approach to define
+  computational jobs.
+- [future.batchtools](https://cran.r-project.org/package=future.batchtools)
+  implements `batchtools` as backend for
+  [future](https://cran.r-project.org/package=future.batchtools).
+- [doFuture](https://cran.r-project.org/package=doFuture) together with
+  [future.batchtools](https://cran.r-project.org/package=future.batchtools)
+  connects `batchtools` to
+  [foreach](https://cran.r-project.org/package=foreach).
+- [drake](https://cran.r-project.org/package=drake) uses graphs to
+  define computational jobs. `batchtools` is used as a backend via
+  [future.batchtools](https://cran.r-project.org/package=future.batchtools).
+
+## Contributing to batchtools
+
+This R package is licensed under the
+[LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.en.html). If you
+encounter problems using this software (lack of documentation,
+misleading or wrong documentation, unexpected behaviour, bugs, …) or
+just want to suggest features, please open an issue in the [issue
+tracker](https://github.com/mlr-org/batchtools/issues). Pull requests
+are welcome and will be included at the discretion of the author. If you
+have customized a template file for your (larger) computing site, please
+share it: fork the repository, place your template in `inst/templates`
+and send a pull request.
+
+# Package index
+
+## Overview
+
+- [`batchtools`](https://batchtools.mlr-org.com/reference/batchtools-package.md)
+  [`batchtools-package`](https://batchtools.mlr-org.com/reference/batchtools-package.md)
+  : batchtools: Tools for Computation on Batch Systems
+
+## Registry
+
+- [`makeRegistry()`](https://batchtools.mlr-org.com/reference/makeRegistry.md)
+  : Registry Constructor
+- [`makeExperimentRegistry()`](https://batchtools.mlr-org.com/reference/makeExperimentRegistry.md)
+  : ExperimentRegistry Constructor
+- [`assertRegistry()`](https://batchtools.mlr-org.com/reference/assertRegistry.md)
+  : assertRegistry
+- [`loadRegistry()`](https://batchtools.mlr-org.com/reference/loadRegistry.md)
+  : Load a Registry from the File System
+- [`saveRegistry()`](https://batchtools.mlr-org.com/reference/saveRegistry.md)
+  : Store the Registy to the File System
+- [`syncRegistry()`](https://batchtools.mlr-org.com/reference/syncRegistry.md)
+  : Synchronize the Registry
+- [`sweepRegistry()`](https://batchtools.mlr-org.com/reference/sweepRegistry.md)
+  : Check Consistency and Remove Obsolete Information
+- [`removeRegistry()`](https://batchtools.mlr-org.com/reference/removeRegistry.md)
+  : Remove a Registry from the File System
+- [`getDefaultRegistry()`](https://batchtools.mlr-org.com/reference/getDefaultRegistry.md)
+  [`setDefaultRegistry()`](https://batchtools.mlr-org.com/reference/getDefaultRegistry.md)
+  : Get and Set the Default Registry
+
+## Define Jobs
+
+- [`batchMap()`](https://batchtools.mlr-org.com/reference/batchMap.md) :
+  Map Operation for Batch Systems
+- [`batchReduce()`](https://batchtools.mlr-org.com/reference/batchReduce.md)
+  : Reduce Operation for Batch Systems
+- [`batchMapResults()`](https://batchtools.mlr-org.com/reference/batchMapResults.md)
+  : Map Over Results to Create New Jobs
+- [`addProblem()`](https://batchtools.mlr-org.com/reference/addProblem.md)
+  [`removeProblems()`](https://batchtools.mlr-org.com/reference/addProblem.md)
+  : Define Problems for Experiments
+- [`addAlgorithm()`](https://batchtools.mlr-org.com/reference/addAlgorithm.md)
+  [`removeAlgorithms()`](https://batchtools.mlr-org.com/reference/addAlgorithm.md)
+  : Define Algorithms for Experiments
+- [`addExperiments()`](https://batchtools.mlr-org.com/reference/addExperiments.md)
+  : Add Experiments to the Registry
+
+## Submit Jobs
+
+- [`submitJobs()`](https://batchtools.mlr-org.com/reference/submitJobs.md)
+  : Submit Jobs to the Batch Systems
+- [`batchExport()`](https://batchtools.mlr-org.com/reference/batchExport.md)
+  : Export Objects to the Slaves
+- [`waitForJobs()`](https://batchtools.mlr-org.com/reference/waitForJobs.md)
+  : Wait for Termination of Jobs
+- [`chunk()`](https://batchtools.mlr-org.com/reference/chunk.md)
+  [`lpt()`](https://batchtools.mlr-org.com/reference/chunk.md)
+  [`binpack()`](https://batchtools.mlr-org.com/reference/chunk.md) :
+  Chunk Jobs for Sequential Execution
+- [`setJobNames()`](https://batchtools.mlr-org.com/reference/JobNames.md)
+  [`getJobNames()`](https://batchtools.mlr-org.com/reference/JobNames.md)
+  : Set and Retrieve Job Names
+
+## Query Job Information
+
+- [`getStatus()`](https://batchtools.mlr-org.com/reference/getStatus.md)
+  : Summarize the Computational Status
+- [`findJobs()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findExperiments()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findSubmitted()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findNotSubmitted()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findStarted()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findNotStarted()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findDone()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findNotDone()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findErrors()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findOnSystem()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findRunning()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findQueued()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findExpired()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  [`findTagged()`](https://batchtools.mlr-org.com/reference/findJobs.md)
+  : Find and Filter Jobs
+- [`getJobTable()`](https://batchtools.mlr-org.com/reference/getJobTable.md)
+  [`getJobStatus()`](https://batchtools.mlr-org.com/reference/getJobTable.md)
+  [`getJobResources()`](https://batchtools.mlr-org.com/reference/getJobTable.md)
+  [`getJobPars()`](https://batchtools.mlr-org.com/reference/getJobTable.md)
+  [`getJobTags()`](https://batchtools.mlr-org.com/reference/getJobTable.md)
+  : Query Job Information
+- [`summarizeExperiments()`](https://batchtools.mlr-org.com/reference/summarizeExperiments.md)
+  : Quick Summary over Experiments
+
+## Retrieve Results
+
+- [`reduceResults()`](https://batchtools.mlr-org.com/reference/reduceResults.md)
+  : Reduce Results
+- [`reduceResultsList()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md)
+  [`reduceResultsDataTable()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md)
+  : Apply Functions on Results
+- [`loadResult()`](https://batchtools.mlr-org.com/reference/loadResult.md)
+  : Load the Result of a Single Job
+- [`unwrap()`](https://batchtools.mlr-org.com/reference/unwrap.md)
+  [`flatten()`](https://batchtools.mlr-org.com/reference/unwrap.md) :
+  Unwrap Nested Data Frames
+
+## Debugging
+
+- [`resetJobs()`](https://batchtools.mlr-org.com/reference/resetJobs.md)
+  : Reset the Computational State of Jobs
+- [`testJob()`](https://batchtools.mlr-org.com/reference/testJob.md) :
+  Run Jobs Interactively
+- [`showLog()`](https://batchtools.mlr-org.com/reference/showLog.md)
+  [`getLog()`](https://batchtools.mlr-org.com/reference/showLog.md) :
+  Inspect Log Files
+- [`getErrorMessages()`](https://batchtools.mlr-org.com/reference/getErrorMessages.md)
+  : Retrieve Error Messages
+- [`grepLogs()`](https://batchtools.mlr-org.com/reference/grepLogs.md) :
+  Grep Log Files for a Pattern
+
+## Remove Jobs
+
+- [`killJobs()`](https://batchtools.mlr-org.com/reference/killJobs.md) :
+  Kill Jobs
+- [`clearRegistry()`](https://batchtools.mlr-org.com/reference/clearRegistry.md)
+  : Remove All Jobs
+- [`removeExperiments()`](https://batchtools.mlr-org.com/reference/removeExperiments.md)
+  : Remove Experiments
+
+## Additional objects
+
+- [`makeJob()`](https://batchtools.mlr-org.com/reference/JobExperiment.md)
+  : Jobs and Experiments
+- [`makeJobCollection()`](https://batchtools.mlr-org.com/reference/JobCollection.md)
+  : JobCollection Constructor
+
+## Cluster Functions
+
+- [`cfKillJob()`](https://batchtools.mlr-org.com/reference/cfKillJob.md)
+  : Cluster Functions Helper to Kill Batch Jobs
+- [`cfBrewTemplate()`](https://batchtools.mlr-org.com/reference/cfBrewTemplate.md)
+  : Cluster Functions Helper to Write Job Description Files
+- [`cfReadBrewTemplate()`](https://batchtools.mlr-org.com/reference/cfReadBrewTemplate.md)
+  : Cluster Functions Helper to Parse a Brew Template
+- [`cfHandleUnknownSubmitError()`](https://batchtools.mlr-org.com/reference/cfHandleUnknownSubmitError.md)
+  : Cluster Functions Helper to Handle Unknown Errors
+- [`makeClusterFunctions()`](https://batchtools.mlr-org.com/reference/makeClusterFunctions.md)
+  : ClusterFunctions Constructor
+- [`makeClusterFunctionsDocker()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsDocker.md)
+  : ClusterFunctions for Docker
+- [`makeClusterFunctionsHyperQueue()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsHyperQueue.md)
+  : ClusterFunctions for HyperQueue
+- [`makeClusterFunctionsInteractive()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsInteractive.md)
+  : ClusterFunctions for Sequential Execution in the Running R Session
+- [`makeClusterFunctionsLSF()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsLSF.md)
+  : ClusterFunctions for LSF Systems
+- [`makeClusterFunctionsMulticore()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsMulticore.md)
+  : ClusterFunctions for Parallel Multicore Execution
+- [`makeClusterFunctionsOpenLava()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsOpenLava.md)
+  : ClusterFunctions for OpenLava
+- [`makeClusterFunctionsSGE()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsSGE.md)
+  : ClusterFunctions for SGE Systems
+- [`makeClusterFunctionsSSH()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsSSH.md)
+  : ClusterFunctions for Remote SSH Execution
+- [`makeClusterFunctionsSlurm()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsSlurm.md)
+  : ClusterFunctions for Slurm Systems
+- [`makeClusterFunctionsSocket()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsSocket.md)
+  : ClusterFunctions for Parallel Socket Execution
+- [`makeClusterFunctionsTORQUE()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsTORQUE.md)
+  : ClusterFunctions for OpenPBS/TORQUE Systems
+- [`makeSubmitJobResult()`](https://batchtools.mlr-org.com/reference/makeSubmitJobResult.md)
+  : Create a SubmitJobResult
+- [`runHook()`](https://batchtools.mlr-org.com/reference/runHook.md) :
+  Trigger Evaluation of Custom Function
+- [`Worker`](https://batchtools.mlr-org.com/reference/Worker.md) :
+  Create a Linux-Worker
+
+## Miscellaneous
+
+- [`addJobTags()`](https://batchtools.mlr-org.com/reference/Tags.md)
+  [`removeJobTags()`](https://batchtools.mlr-org.com/reference/Tags.md)
+  [`getUsedJobTags()`](https://batchtools.mlr-org.com/reference/Tags.md)
+  : Add or Remove Job Tags
+- [`btlapply()`](https://batchtools.mlr-org.com/reference/btlapply.md)
+  [`btmapply()`](https://batchtools.mlr-org.com/reference/btlapply.md) :
+  Synchronous Apply Functions
+- [`ijoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`ljoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`rjoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`ojoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`sjoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`ajoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md)
+  [`ujoin()`](https://batchtools.mlr-org.com/reference/JoinTables.md) :
+  Inner, Left, Right, Outer, Semi and Anti Join for Data Tables
+- [`runOSCommand()`](https://batchtools.mlr-org.com/reference/runOSCommand.md)
+  : Run OS Commands on Local or Remote Machines
+- [`execJob()`](https://batchtools.mlr-org.com/reference/execJob.md) :
+  Execute a Single Jobs
+- [`doJobCollection()`](https://batchtools.mlr-org.com/reference/doJobCollection.md)
+  : Execute Jobs of a JobCollection
+- [`estimateRuntimes()`](https://batchtools.mlr-org.com/reference/estimateRuntimes.md)
+  [`print(`*`<RuntimeEstimate>`*`)`](https://batchtools.mlr-org.com/reference/estimateRuntimes.md)
+  : Estimate Remaining Runtimes
+
+# Articles
+
+### All vignettes
+
+- [batchtools](https://batchtools.mlr-org.com/articles/batchtools.md):

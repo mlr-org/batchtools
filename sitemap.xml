@@ -45,6 +45,7 @@
 <url><loc>https://batchtools.mlr-org.com/reference/loadResult.html</loc></url>
 <url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctions.html</loc></url>
 <url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctionsDocker.html</loc></url>
+<url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctionsHyperQueue.html</loc></url>
 <url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctionsInteractive.html</loc></url>
 <url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctionsLSF.html</loc></url>
 <url><loc>https://batchtools.mlr-org.com/reference/makeClusterFunctionsMulticore.html</loc></url>
