@@ -21,7 +21,7 @@ syncRegistry = function(reg = getDefaultRegistry()) {
 
 sync = function(reg) {
   "!DEBUG [syncRegistry]: Triggered syncRegistry"
-  fns = list.files(dir(reg, "updates"), full.names = TRUE)
+  fns = list.files(dir(reg, "updates"), pattern = "\\.rds$", full.names = TRUE)
   if (length(fns) == 0L)
     return(character())
 
