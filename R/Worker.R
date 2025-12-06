@@ -52,6 +52,7 @@ Worker = R6Class("Worker",
         if (!testString(script, min.chars = 1L)) {
           stopf("Unable to locate helper script on SSH node '%s'. Is batchtools installed on the node?", nodename)
         }
+        self$script = script
       }
 
       self$ncpus = ncpus %??% as.integer(private$run("number-of-cpus")$output)
