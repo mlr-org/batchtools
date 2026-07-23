@@ -22,6 +22,7 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
     memory = if (!is.null(jc$resources$memory)) sprintf("--resource mem=%iMiB", jc$resources$memory)
     # time-limit is the maximum time the job can run, time-request is the minimum remaining lifetime a worker must have
     walltime =  if (!is.null(jc$resources$walltime)) sprintf("--time-limit=%is --time-request=%is", jc$resources$walltime, jc$resources$walltime)
+    gpus = if (!is.null(jc$resources$gpus)) sprintf("--resource gpus/nvidia=%i", jc$resources$gpus)
 
 
     args = c(
@@ -33,6 +34,7 @@ makeClusterFunctionsHyperQueue = function(scheduler.latency = 1, fs.latency = 65
       ncpus,
       memory,
       walltime,
+      gpus,
       "--",
       "Rscript", "-e",
       shQuote(sprintf("batchtools::doJobCollection('%s', '%s')", jc$uri, jc$log.file))
