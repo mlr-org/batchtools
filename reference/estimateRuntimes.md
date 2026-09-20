@@ -122,7 +122,7 @@ tmp$status[ids, done := done + tab[ids, runtime(algorithm, x, y)]]
 #> 496:    496    496         NA         NA         NA   <NA>       NA          NA
 #> 497:    497    497         NA         NA         NA   <NA>       NA          NA
 #> 498:    498    498         NA         NA         NA   <NA>       NA          NA
-#> 499:    499    499 1789914307 1789914307 1789914807   <NA>       NA           1
+#> 499:    499    499 1789914492 1789914492 1789914992   <NA>       NA           1
 #> 500:    500    500         NA         NA         NA   <NA>       NA          NA
 #>           batch.id log.file                            job.hash job.name  repl
 #>             <char>   <char>                              <char>   <char> <int>
@@ -135,62 +135,62 @@ tmp$status[ids, done := done + tab[ids, runtime(algorithm, x, y)]]
 #> 496:          <NA>     <NA>                                <NA>     <NA>     1
 #> 497:          <NA>     <NA>                                <NA>     <NA>     1
 #> 498:          <NA>     <NA>                                <NA>     <NA>     1
-#> 499: cfInteractive     <NA> joba2d1aaf6ea8637a62de3a2f715e943dc     <NA>     1
+#> 499: cfInteractive     <NA> job9da579a638675c4b4634074a3bea3af8     <NA>     1
 #> 500:          <NA>     <NA>                                <NA>     <NA>     1
 rjoin(sjoin(tab, ids), getJobStatus(ids, reg = tmp)[, c("job.id", "time.running")])
 #> Key: <job.id>
 #>     job.id problem algorithm     x      y   time.running
 #>      <int>  <char>    <char> <int> <char>     <difftime>
-#>  1:     32    iris      nrow     7      b 1100.0281 secs
-#>  2:     42    iris      nrow     9      b 1100.0280 secs
-#>  3:     47    iris      nrow    10      b 1100.0276 secs
-#>  4:     66    iris      nrow    14      a 1100.0320 secs
-#>  5:     73    iris      nrow    15      c  100.0275 secs
-#>  6:     75    iris      nrow    15      e  100.0278 secs
-#>  7:     86    iris      nrow    18      a 1100.0278 secs
-#>  8:    100    iris      nrow    20      e  100.0276 secs
-#>  9:    101    iris      nrow    21      a 1100.0271 secs
-#> 10:    103    iris      nrow    21      c  100.0277 secs
-#> 11:    123    iris      nrow    25      c  100.0276 secs
-#> 12:    125    iris      nrow    25      e  100.0282 secs
-#> 13:    161    iris      nrow    33      a 1100.0277 secs
-#> 14:    165    iris      nrow    33      e  100.0272 secs
-#> 15:    169    iris      nrow    34      d  100.0315 secs
-#> 16:    183    iris      nrow    37      c  100.0276 secs
-#> 17:    184    iris      nrow    37      d  100.0277 secs
-#> 18:    203    iris      nrow    41      c  100.0283 secs
-#> 19:    207    iris      nrow    42      b 1100.0276 secs
-#> 20:    209    iris      nrow    42      d  100.0277 secs
-#> 21:    220    iris      nrow    44      e  100.0278 secs
-#> 22:    227    iris      nrow    46      b 1100.0278 secs
-#> 23:    229    iris      nrow    46      d  100.0281 secs
-#> 24:    231    iris      nrow    47      a 1100.0281 secs
-#> 25:    244    iris      nrow    49      d  100.0277 secs
-#> 26:    260    iris      ncol     2      e  500.0323 secs
-#> 27:    276    iris      ncol     6      a 1500.0280 secs
-#> 28:    278    iris      ncol     6      c  500.0281 secs
-#> 29:    279    iris      ncol     6      d  500.0278 secs
-#> 30:    296    iris      ncol    10      a 1500.0281 secs
-#> 31:    320    iris      ncol    14      e  500.0316 secs
-#> 32:    340    iris      ncol    18      e  500.0279 secs
-#> 33:    347    iris      ncol    20      b 1500.0282 secs
-#> 34:    363    iris      ncol    23      c  500.0278 secs
-#> 35:    369    iris      ncol    24      d  500.0279 secs
-#> 36:    373    iris      ncol    25      c  500.0328 secs
-#> 37:    387    iris      ncol    28      b 1500.0278 secs
-#> 38:    410    iris      ncol    32      e  500.0282 secs
-#> 39:    421    iris      ncol    35      a 1500.0278 secs
-#> 40:    436    iris      ncol    38      a 1500.0278 secs
-#> 41:    444    iris      ncol    39      d  500.0322 secs
-#> 42:    448    iris      ncol    40      c  500.0283 secs
-#> 43:    456    iris      ncol    42      a 1500.0279 secs
-#> 44:    459    iris      ncol    42      d  500.0281 secs
-#> 45:    467    iris      ncol    44      b 1500.0330 secs
-#> 46:    468    iris      ncol    44      c  500.0282 secs
-#> 47:    475    iris      ncol    45      e  500.0275 secs
-#> 48:    482    iris      ncol    47      b 1500.0278 secs
-#> 49:    492    iris      ncol    49      b 1500.0319 secs
-#> 50:    499    iris      ncol    50      d  500.0281 secs
+#>  1:     32    iris      nrow     7      b 1100.0340 secs
+#>  2:     42    iris      nrow     9      b 1100.0335 secs
+#>  3:     47    iris      nrow    10      b 1100.0332 secs
+#>  4:     66    iris      nrow    14      a 1100.0369 secs
+#>  5:     73    iris      nrow    15      c  100.0333 secs
+#>  6:     75    iris      nrow    15      e  100.0336 secs
+#>  7:     86    iris      nrow    18      a 1100.0332 secs
+#>  8:    100    iris      nrow    20      e  100.0333 secs
+#>  9:    101    iris      nrow    21      a 1100.0338 secs
+#> 10:    103    iris      nrow    21      c  100.0332 secs
+#> 11:    123    iris      nrow    25      c  100.0335 secs
+#> 12:    125    iris      nrow    25      e  100.0340 secs
+#> 13:    161    iris      nrow    33      a 1100.0336 secs
+#> 14:    165    iris      nrow    33      e  100.0332 secs
+#> 15:    169    iris      nrow    34      d  100.0371 secs
+#> 16:    183    iris      nrow    37      c  100.0332 secs
+#> 17:    184    iris      nrow    37      d  100.0333 secs
+#> 18:    203    iris      nrow    41      c  100.0333 secs
+#> 19:    207    iris      nrow    42      b 1100.0331 secs
+#> 20:    209    iris      nrow    42      d  100.0332 secs
+#> 21:    220    iris      nrow    44      e  100.0331 secs
+#> 22:    227    iris      nrow    46      b 1100.0330 secs
+#> 23:    229    iris      nrow    46      d  100.0340 secs
+#> 24:    231    iris      nrow    47      a 1100.0337 secs
+#> 25:    244    iris      nrow    49      d  100.0340 secs
+#> 26:    260    iris      ncol     2      e  500.0376 secs
+#> 27:    276    iris      ncol     6      a 1500.0331 secs
+#> 28:    278    iris      ncol     6      c  500.0333 secs
+#> 29:    279    iris      ncol     6      d  500.0331 secs
+#> 30:    296    iris      ncol    10      a 1500.0337 secs
+#> 31:    320    iris      ncol    14      e  500.0367 secs
+#> 32:    340    iris      ncol    18      e  500.0332 secs
+#> 33:    347    iris      ncol    20      b 1500.0335 secs
+#> 34:    363    iris      ncol    23      c  500.0331 secs
+#> 35:    369    iris      ncol    24      d  500.0339 secs
+#> 36:    373    iris      ncol    25      c  500.0377 secs
+#> 37:    387    iris      ncol    28      b 1500.0329 secs
+#> 38:    410    iris      ncol    32      e  500.0335 secs
+#> 39:    421    iris      ncol    35      a 1500.0336 secs
+#> 40:    436    iris      ncol    38      a 1500.0337 secs
+#> 41:    444    iris      ncol    39      d  500.0371 secs
+#> 42:    448    iris      ncol    40      c  500.0335 secs
+#> 43:    456    iris      ncol    42      a 1500.0332 secs
+#> 44:    459    iris      ncol    42      d  500.0335 secs
+#> 45:    467    iris      ncol    44      b 1500.0373 secs
+#> 46:    468    iris      ncol    44      c  500.0333 secs
+#> 47:    475    iris      ncol    45      e  500.0330 secs
+#> 48:    482    iris      ncol    47      b 1500.0335 secs
+#> 49:    492    iris      ncol    49      b 1500.0372 secs
+#> 50:    499    iris      ncol    50      d  500.0335 secs
 #>     job.id problem algorithm     x      y   time.running
 #>      <int>  <char>    <char> <int> <char>     <difftime>
 
@@ -198,47 +198,47 @@ rjoin(sjoin(tab, ids), getJobStatus(ids, reg = tmp)[, c("job.id", "time.running"
 est = estimateRuntimes(tab, reg = tmp)
 print(est)
 #> Runtime Estimate for 500 jobs with 1 CPUs
-#>   Done     : 0d 09h 43m 21.4s
-#>   Remaining: 3d 17h 36m 14.1s
-#>   Total    : 4d 03h 19m 35.5s
+#>   Done     : 0d 09h 43m 21.7s
+#>   Remaining: 3d 17h 37m 24.4s
+#>   Total    : 4d 03h 20m 46.1s
 rjoin(tab, est$runtimes)
 #> Key: <job.id>
 #>      job.id problem algorithm     x      y      type   runtime
 #>       <int>  <char>    <char> <int> <char>    <fctr>     <num>
-#>   1:      1    iris      nrow     1      a estimated 1105.8825
-#>   2:      2    iris      nrow     1      b estimated 1089.8365
-#>   3:      3    iris      nrow     1      c estimated  337.8349
-#>   4:      4    iris      nrow     1      d estimated  317.7009
-#>   5:      5    iris      nrow     1      e estimated  318.5449
+#>   1:      1    iris      nrow     1      a estimated 1105.4880
+#>   2:      2    iris      nrow     1      b estimated 1089.2820
+#>   3:      3    iris      nrow     1      c estimated  338.2405
+#>   4:      4    iris      nrow     1      d estimated  318.1065
+#>   5:      5    iris      nrow     1      e estimated  318.1505
 #>  ---                                                          
-#> 496:    496    iris      ncol    50      a estimated 1383.8231
-#> 497:    497    iris      ncol    50      b estimated 1391.0735
-#> 498:    498    iris      ncol    50      c estimated  617.6860
-#> 499:    499    iris      ncol    50      d  observed  500.0281
-#> 500:    500    iris      ncol    50      e estimated  577.8780
+#> 496:    496    iris      ncol    50      a estimated 1383.8285
+#> 497:    497    iris      ncol    50      b estimated 1391.0788
+#> 498:    498    iris      ncol    50      c estimated  618.4913
+#> 499:    499    iris      ncol    50      d  observed  500.0335
+#> 500:    500    iris      ncol    50      e estimated  577.8834
 print(est, n = 10)
 #> Runtime Estimate for 500 jobs with 10 CPUs
-#>   Done     : 0d 09h 43m 21.4s
-#>   Remaining: 3d 17h 36m 14.1s
-#>   Parallel : 0d 08h 58m 18.5s
-#>   Total    : 4d 03h 19m 35.5s
+#>   Done     : 0d 09h 43m 21.7s
+#>   Remaining: 3d 17h 37m 24.4s
+#>   Parallel : 0d 08h 58m 25.8s
+#>   Total    : 4d 03h 20m 46.1s
 
 # Submit jobs with longest runtime first:
 ids = est$runtimes[type == "estimated"][order(runtime, decreasing = TRUE)]
 print(ids)
 #>      job.id      type   runtime
 #>       <int>    <fctr>     <num>
-#>   1:    466 estimated 1421.1201
-#>   2:    461 estimated 1419.7263
-#>   3:    462 estimated 1415.9003
-#>   4:    457 estimated 1415.9002
-#>   5:    472 estimated 1415.0542
+#>   1:    466 estimated 1421.1254
+#>   2:    461 estimated 1419.7317
+#>   3:    462 estimated 1415.9912
+#>   4:    457 estimated 1415.9912
+#>   5:    472 estimated 1414.9450
 #>  ---                           
-#> 446:    164 estimated  133.9659
-#> 447:    185 estimated  133.4550
-#> 448:    174 estimated  131.6163
-#> 449:    204 estimated  131.6141
-#> 450:    179 estimated  130.4690
+#> 446:    194 estimated  133.3101
+#> 447:    185 estimated  132.9607
+#> 448:    174 estimated  131.1220
+#> 449:    204 estimated  130.1597
+#> 450:    179 estimated  129.9747
 if (FALSE) { # \dontrun{
 submitJobs(ids, reg = tmp)
 } # }
@@ -249,126 +249,126 @@ ids[, chunk := binpack(runtime, 3600)]
 #> Key: <job.id>
 #>      job.id      type   runtime chunk
 #>       <int>    <fctr>     <num> <int>
-#>   1:      1 estimated 1105.8825    47
-#>   2:      2 estimated 1089.8365    51
-#>   3:      3 estimated  337.8349    54
-#>   4:      4 estimated  317.7009    71
-#>   5:      5 estimated  318.5449    34
+#>   1:      1 estimated 1105.4880    47
+#>   2:      2 estimated 1089.2820    52
+#>   3:      3 estimated  338.2405    54
+#>   4:      4 estimated  318.1065    71
+#>   5:      5 estimated  318.1505    34
 #>  ---                                 
-#> 446:    495 estimated  584.8126    15
-#> 447:    496 estimated 1383.8231    20
-#> 448:    497 estimated 1391.0735    13
-#> 449:    498 estimated  617.6860     4
-#> 450:    500 estimated  577.8780    22
+#> 446:    495 estimated  584.8180    15
+#> 447:    496 estimated 1383.8285    20
+#> 448:    497 estimated 1391.0788    13
+#> 449:    498 estimated  618.4913     4
+#> 450:    500 estimated  577.8834    22
 print(ids)
 #> Key: <job.id>
 #>      job.id      type   runtime chunk
 #>       <int>    <fctr>     <num> <int>
-#>   1:      1 estimated 1105.8825    47
-#>   2:      2 estimated 1089.8365    51
-#>   3:      3 estimated  337.8349    54
-#>   4:      4 estimated  317.7009    71
-#>   5:      5 estimated  318.5449    34
+#>   1:      1 estimated 1105.4880    47
+#>   2:      2 estimated 1089.2820    52
+#>   3:      3 estimated  338.2405    54
+#>   4:      4 estimated  318.1065    71
+#>   5:      5 estimated  318.1505    34
 #>  ---                                 
-#> 446:    495 estimated  584.8126    15
-#> 447:    496 estimated 1383.8231    20
-#> 448:    497 estimated 1391.0735    13
-#> 449:    498 estimated  617.6860     4
-#> 450:    500 estimated  577.8780    22
+#> 446:    495 estimated  584.8180    15
+#> 447:    496 estimated 1383.8285    20
+#> 448:    497 estimated 1391.0788    13
+#> 449:    498 estimated  618.4913     4
+#> 450:    500 estimated  577.8834    22
 print(ids[, list(runtime = sum(runtime)), by = chunk])
 #>     chunk  runtime
 #>     <int>    <num>
-#>  1:    47 3491.511
-#>  2:    51 3599.698
-#>  3:    54 3588.910
-#>  4:    71 3486.336
-#>  5:    34 3593.204
-#>  6:    48 3486.401
-#>  7:    52 3597.114
-#>  8:    55 3580.981
-#>  9:    72 3482.995
-#> 10:    68 3493.236
-#> 11:    56 3571.618
-#> 12:    73 3477.072
-#> 13:    69 3491.933
-#> 14:    57 3563.566
-#> 15:    74 3468.503
-#> 16:    70 3489.965
-#> 17:    46 3515.791
-#> 18:    50 3599.949
-#> 19:    38 3595.128
-#> 20:    65 3509.216
-#> 21:    35 3593.951
-#> 22:    43 3569.882
-#> 23:    66 3505.247
-#> 24:    42 3579.682
-#> 25:    62 3526.574
-#> 26:    60 3533.523
-#> 27:    53 3598.628
-#> 28:    40 3598.954
-#> 29:    59 3542.898
-#> 30:    58 3551.641
-#> 31:    49 3478.456
-#> 32:    39 3599.497
-#> 33:    61 3530.014
-#> 34:    41 3587.202
-#> 35:    37 3599.175
-#> 36:    36 3599.770
-#> 37:    44 3541.260
-#> 38:    64 3513.074
-#> 39:    63 3516.844
-#> 40:    45 3540.460
-#> 41:    67 3502.128
-#> 42:    28 3594.713
-#> 43:    25 3589.941
-#> 44:    24 3597.794
-#> 45:    27 3596.899
-#> 46:    29 3570.087
-#> 47:    26 3587.872
-#> 48:    75 3599.654
-#> 49:    20 3521.039
-#> 50:     9 3588.734
-#> 51:    21 3516.187
-#> 52:     6 3591.318
-#> 53:     7 3598.154
-#> 54:    12 3558.043
-#> 55:     5 3596.534
-#> 56:    11 3571.354
-#> 57:    33 3599.827
-#> 58:    10 3575.856
-#> 59:    32 3599.884
-#> 60:     3 3599.515
-#> 61:    84 3596.373
-#> 62:    76 3596.997
-#> 63:    83 3599.771
-#> 64:     4 3599.290
-#> 65:    80 3487.110
-#> 66:    81 3479.151
-#> 67:    77 3526.845
-#> 68:    86 3574.734
-#> 69:    91 2172.244
-#> 70:    82 3599.578
-#> 71:    79 3499.224
-#> 72:    89 3550.060
-#> 73:    87 3567.149
-#> 74:    78 3510.511
-#> 75:    88 3558.066
-#> 76:    90 3528.552
-#> 77:    85 3585.930
-#> 78:     2 3599.744
-#> 79:     1 3599.960
-#> 80:     8 3593.580
-#> 81:    30 3562.759
-#> 82:    18 3571.875
-#> 83:    13 3596.767
-#> 84:    22 3598.693
-#> 85:    19 3569.352
-#> 86:    16 3586.475
-#> 87:    31 3548.195
-#> 88:    17 3578.853
-#> 89:    23 3598.692
-#> 90:    14 3598.181
-#> 91:    15 3594.004
+#>  1:    47 3491.266
+#>  2:    52 3595.056
+#>  3:    54 3590.348
+#>  4:    71 3488.547
+#>  5:    34 3592.826
+#>  6:    48 3485.066
+#>  7:    55 3584.553
+#>  8:    72 3485.265
+#>  9:    51 3597.003
+#> 10:    56 3573.740
+#> 11:    73 3478.537
+#> 12:    69 3493.033
+#> 13:    53 3599.909
+#> 14:    57 3565.360
+#> 15:    74 3599.528
+#> 16:    70 3490.306
+#> 17:    46 3515.547
+#> 18:    50 3599.756
+#> 19:    38 3595.643
+#> 20:    64 3516.230
+#> 21:    35 3593.253
+#> 22:    43 3569.983
+#> 23:    65 3512.019
+#> 24:    39 3599.367
+#> 25:    61 3530.541
+#> 26:    40 3599.056
+#> 27:    59 3543.113
+#> 28:    58 3551.700
+#> 29:    49 3477.654
+#> 30:    42 3581.126
+#> 31:    60 3533.808
+#> 32:    62 3528.179
+#> 33:    41 3587.464
+#> 34:    37 3599.596
+#> 35:    36 3599.638
+#> 36:    44 3540.562
+#> 37:    63 3517.999
+#> 38:    66 3506.334
+#> 39:    45 3539.762
+#> 40:    67 3505.665
+#> 41:    68 3502.969
+#> 42:    28 3594.895
+#> 43:    24 3598.343
+#> 44:    25 3590.652
+#> 45:    27 3597.007
+#> 46:    29 3571.229
+#> 47:    26 3588.139
+#> 48:    75 3599.317
+#> 49:    20 3521.754
+#> 50:     9 3588.994
+#> 51:    21 3517.062
+#> 52:     6 3591.511
+#> 53:     8 3593.771
+#> 54:    12 3560.130
+#> 55:     5 3596.956
+#> 56:    10 3575.851
+#> 57:    32 3599.898
+#> 58:    11 3572.875
+#> 59:    33 3599.228
+#> 60:    82 3471.057
+#> 61:    84 3598.855
+#> 62:    85 3589.212
+#> 63:    76 3598.443
+#> 64:     3 3599.929
+#> 65:    80 3492.694
+#> 66:    81 3483.062
+#> 67:    77 3528.725
+#> 68:    87 3568.989
+#> 69:    91 2293.682
+#> 70:    79 3503.848
+#> 71:    89 3550.522
+#> 72:    88 3559.122
+#> 73:    78 3515.010
+#> 74:     2 3599.997
+#> 75:    83 3599.893
+#> 76:    86 3578.383
+#> 77:    90 3528.472
+#> 78:     4 3599.692
+#> 79:     7 3599.569
+#> 80:    30 3563.744
+#> 81:    18 3571.580
+#> 82:    13 3597.197
+#> 83:    22 3598.715
+#> 84:    19 3568.414
+#> 85:    16 3585.782
+#> 86:    31 3548.302
+#> 87:    17 3578.161
+#> 88:    23 3598.799
+#> 89:    15 3593.089
+#> 90:    14 3596.282
+#> 91:     1 3470.307
 #>     chunk  runtime
 #>     <int>    <num>
 if (FALSE) { # \dontrun{
@@ -381,28 +381,28 @@ ids[, chunk := lpt(runtime, 10)]
 #> Key: <job.id>
 #>      job.id      type   runtime chunk
 #>       <int>    <fctr>     <num> <int>
-#>   1:      1 estimated 1105.8825     3
-#>   2:      2 estimated 1089.8365     1
-#>   3:      3 estimated  337.8349     7
-#>   4:      4 estimated  317.7009     2
-#>   5:      5 estimated  318.5449     1
+#>   1:      1 estimated 1105.4880     6
+#>   2:      2 estimated 1089.2820     1
+#>   3:      3 estimated  338.2405     3
+#>   4:      4 estimated  318.1065     7
+#>   5:      5 estimated  318.1505     1
 #>  ---                                 
-#> 446:    495 estimated  584.8126     6
-#> 447:    496 estimated 1383.8231     2
-#> 448:    497 estimated 1391.0735     4
-#> 449:    498 estimated  617.6860     5
-#> 450:    500 estimated  577.8780     2
+#> 446:    495 estimated  584.8180     1
+#> 447:    496 estimated 1383.8285     2
+#> 448:    497 estimated 1391.0788     4
+#> 449:    498 estimated  618.4913     6
+#> 450:    500 estimated  577.8834     5
 print(ids[, list(runtime = sum(runtime)), by = chunk])
 #>     chunk  runtime
 #>     <int>    <num>
-#>  1:     3 32282.33
-#>  2:     1 32227.50
-#>  3:     7 32221.78
-#>  4:     2 32282.03
-#>  5:     6 32222.02
-#>  6:     9 32297.96
-#>  7:     4 32221.91
-#>  8:    10 32298.53
-#>  9:     5 32298.27
-#> 10:     8 32221.78
+#>  1:     6 32228.15
+#>  2:     1 32232.33
+#>  3:     3 32228.97
+#>  4:     7 32305.79
+#>  5:     8 32227.82
+#>  6:     9 32228.05
+#>  7:    10 32305.47
+#>  8:     2 32291.68
+#>  9:     5 32304.83
+#> 10:     4 32291.35
 ```
