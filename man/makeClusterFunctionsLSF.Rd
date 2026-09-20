@@ -56,6 +56,7 @@ Array jobs are currently not supported.
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsMulticore}()},
 \code{\link{makeClusterFunctionsOpenLava}()},

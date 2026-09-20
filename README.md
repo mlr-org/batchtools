@@ -21,7 +21,7 @@ batchtools provides a parallel implementation of Map for high
 performance computing systems managed by schedulers like Slurm, Sun Grid
 Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker
 Swarm (see the setup section in the
-[vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)).
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html)).
 
 Main features:
 
@@ -55,8 +55,8 @@ devtools::install_github("mlr-org/batchtools")
 
 Next, you need to setup `batchtools` for your HPC (it will run
 sequentially otherwise). See the
-[vignette](https://mlr-org.github.io/batchtools/articles/batchtools.html#setup)
-for instructions.
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html) for
+instructions.
 
 ## Why batchtools?
 
@@ -80,22 +80,20 @@ discontinued for the following reasons:
 [BatchJobs](https://github.com/tudo-r/BatchJobs/) and
 [BatchExperiments](https://github.com/tudo-r/Batchexperiments) will
 remain on CRAN, but new features are unlikely to be ported back. The
-[vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration)
+[vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
 contains a section comparing the packages.
 
 ## Resources
 
-- [NEWS](https://batchtools.mlr-org.com/batchtools/news/)
-- [Function
-  reference](https://batchtools.mlr-org.com/batchtools/reference/)
-- [Vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)
+- [Function reference](https://batchtools.mlr-org.com/reference/)
+- [Vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
 - [JOSS Paper](https://doi.org/10.21105/joss.00135): Short paper on
   batchtools. Please cite this if you use batchtools.
 - [Paper on
   BatchJobs/BatchExperiments](https://www.jstatsoft.org/v64/i11): The
   described concept still holds for batchtools and most examples work
   analogously (see the
-  [vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration)
+  [vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
   for differences between the packages).
 
 ## Citation

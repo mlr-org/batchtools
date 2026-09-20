@@ -12,3 +12,5 @@
 ^_pkgdown\.yml$
 ^README.RMD$
 ^.github$
+registry/
+^\.lintr$
