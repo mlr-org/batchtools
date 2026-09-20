@@ -142,9 +142,9 @@ getJobTable(reg = tmp)
 #> Key: <job.id>
 #>    job.id           submitted             started                done
 #>     <int>              <POSc>              <POSc>              <POSc>
-#> 1:      1 2026-09-20 14:28:16 2026-09-20 14:28:16 2026-09-20 14:28:16
-#> 2:      2 2026-09-20 14:28:16 2026-09-20 14:28:16 2026-09-20 14:28:17
-#> 3:      3 2026-09-20 14:28:17 2026-09-20 14:28:17 2026-09-20 14:28:17
+#> 1:      1 2026-09-20 14:31:51 2026-09-20 14:31:51 2026-09-20 14:31:51
+#> 2:      2 2026-09-20 14:31:51 2026-09-20 14:31:51 2026-09-20 14:31:51
+#> 3:      3 2026-09-20 14:31:51 2026-09-20 14:31:51 2026-09-20 14:31:52
 #>                                      error mem.used      batch.id log.file
 #>                                     <char>    <num>        <char>   <char>
 #> 1: Error in (function (x)  : x must be > 0       NA cfInteractive     <NA>
@@ -152,9 +152,9 @@ getJobTable(reg = tmp)
 #> 3:                                    <NA>       NA cfInteractive     <NA>
 #>                               job.hash job.name      time.queued   time.running
 #>                                 <char>   <char>       <difftime>     <difftime>
-#> 1: job9a677f23e65846b30428fa2959bab279     <NA> 0.004000187 secs 0.2140999 secs
-#> 2: jobf0320f47c3326ece6da703e64539a974     <NA> 0.004199982 secs 0.2069001 secs
-#> 3: job5add3e21d54b908498bc49041879b2d8     <NA> 0.004299879 secs 0.2243001 secs
+#> 1: job4f66abf5fa7c33ab940d1a899619b4b7     <NA> 0.003999949 secs 0.2158000 secs
+#> 2: job194ad00030024989da8105b2fd80241c     <NA> 0.004199982 secs 0.2075999 secs
+#> 3: job32ec89217f82b66afd89b7ac3d1e57de     <NA> 0.004000187 secs 0.2250998 secs
 #>     job.pars resources      tags
 #>       <list>    <list>    <char>
 #> 1: <list[1]> <list[0]>      tag1
