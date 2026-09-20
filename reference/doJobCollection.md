@@ -55,11 +55,11 @@ doJobCollection(jc)
 #> ### [bt]: Setting working directory to '/home/runner/work/batchtools/batchtools/docs/reference'
 #> ### [bt]: Memory measurement disabled
 #> ### [bt]: Starting job [batchtools job.id=1]
-#> ### [bt]: Setting seed to 30429 ...
+#> ### [bt]: Setting seed to 1166 ...
 #> 
 #> ### [bt]: Job terminated successfully [batchtools job.id=1]
 #> ### [bt]: Starting job [batchtools job.id=2]
-#> ### [bt]: Setting seed to 30430 ...
+#> ### [bt]: Setting seed to 1167 ...
 #> 
 #> ### [bt]: Job terminated successfully [batchtools job.id=2]
 #> ### [bt]: Calculation finished!

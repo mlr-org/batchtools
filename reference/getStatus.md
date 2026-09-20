@@ -48,7 +48,7 @@ getStatus(ids = NULL, reg = getDefaultRegistry())
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) or
   `integer`\]  
   A [`data.frame`](https://rdrr.io/r/base/data.frame.html) (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html))
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html))
   with a column named “job.id”. Alternatively, you may also pass a
   vector of integerish job ids. If not set, defaults to all jobs.
   Invalid ids are ignored.
@@ -61,7 +61,7 @@ getStatus(ids = NULL, reg = getDefaultRegistry())
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 (with class “Status” for printing).
 
 ## See also
@@ -93,7 +93,7 @@ waitForJobs(reg = tmp)
 
 tab = getStatus(reg = tmp)
 print(tab)
-#> Status for 5 jobs at 2025-11-26 10:22:55:
+#> Status for 5 jobs at 2026-09-20 14:25:13:
 #>   Submitted    : 4 ( 80.0%)
 #>   -- Queued    : 0 (  0.0%)
 #>   -- Started   : 4 ( 80.0%)
@@ -112,5 +112,5 @@ str(tab)
 #>  $ running  : int 0
 #>  $ expired  : int 0
 #>  $ system   : int 0
-#>  - attr(*, ".internal.selfref")=<externalptr> 
+#>  - attr(*, ".internal.selfref")=<pointer: 0x558f4d259ee0> 
 ```

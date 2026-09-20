@@ -29,7 +29,7 @@ getJobTags(ids = NULL, reg = getDefaultRegistry())
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) or
   `integer`\]  
   A [`data.frame`](https://rdrr.io/r/base/data.frame.html) (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html))
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html))
   with a column named “job.id”. Alternatively, you may also pass a
   vector of integerish job ids. If not set, defaults to all jobs.
   Invalid ids are ignored.
@@ -42,7 +42,7 @@ getJobTags(ids = NULL, reg = getDefaultRegistry())
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 with the following columns (not necessarily in this order):
 
 - job.id:
@@ -142,9 +142,9 @@ getJobTable(reg = tmp)
 #> Key: <job.id>
 #>    job.id           submitted             started                done
 #>     <int>              <POSc>              <POSc>              <POSc>
-#> 1:      1 2025-11-26 10:22:53 2025-11-26 10:22:53 2025-11-26 10:22:53
-#> 2:      2 2025-11-26 10:22:53 2025-11-26 10:22:53 2025-11-26 10:22:53
-#> 3:      3 2025-11-26 10:22:53 2025-11-26 10:22:53 2025-11-26 10:22:53
+#> 1:      1 2026-09-20 14:25:11 2026-09-20 14:25:11 2026-09-20 14:25:11
+#> 2:      2 2026-09-20 14:25:11 2026-09-20 14:25:11 2026-09-20 14:25:11
+#> 3:      3 2026-09-20 14:25:11 2026-09-20 14:25:11 2026-09-20 14:25:11
 #>                                      error mem.used      batch.id log.file
 #>                                     <char>    <num>        <char>   <char>
 #> 1: Error in (function (x)  : x must be > 0       NA cfInteractive     <NA>
@@ -152,9 +152,9 @@ getJobTable(reg = tmp)
 #> 3:                                    <NA>       NA cfInteractive     <NA>
 #>                               job.hash job.name      time.queued   time.running
 #>                                 <char>   <char>       <difftime>     <difftime>
-#> 1: job26d3d9694e2eea967a1ae614cc3f802f     <NA> 0.003999949 secs 0.2023001 secs
-#> 2: jobd338201c19417e1e7ac4e3f240b6a2da     <NA> 0.004199982 secs 0.1984999 secs
-#> 3: jobf6ad2421833e9dac100a0a1881238d2b     <NA> 0.003999949 secs 0.2072999 secs
+#> 1: jobed01b4c228c134d4f80a637ff4845393     <NA> 0.003199816 secs 0.1753001 secs
+#> 2: jobd8b7aaa44e0c77534f0521a03f2f331a     <NA> 0.003200054 secs 0.1748002 secs
+#> 3: job9e1926d3137908dc279f7149aa011021     <NA> 0.010399818 secs 0.1937001 secs
 #>     job.pars resources      tags
 #>       <list>    <list>    <char>
 #> 1: <list[1]> <list[0]>      tag1

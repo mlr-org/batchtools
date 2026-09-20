@@ -62,7 +62,7 @@ batchReduce(
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 with ids of added jobs stored in column “job.id”.
 
 ## See also

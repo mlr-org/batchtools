@@ -43,8 +43,8 @@ and are triggered on the following events:
 
   `function(reg, updates, reader, ...)`: Run after all jobs in the chunk
   are terminated on the slave. `updates` is a
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
-  of updates which will be merged with the
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html) of
+  updates which will be merged with the
   [`Registry`](https://batchtools.mlr-org.com/reference/makeRegistry.md)
   by the master. `reader` is an internal cache object.
 

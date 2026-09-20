@@ -5,7 +5,7 @@
       fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
     }
   };
-</script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet"><link href="../deps/JetBrains_Mono-0.4.10/font.css" rel="stylesheet"><link href="../deps/Roboto_Slab-0.4.10/font.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"><script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="ExperimentRegistry Constructor — makeExperimentRegistry"><meta name="description" content="makeExperimentRegistry constructs a special Registry which
+</script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet"><link href="../deps/JetBrains_Mono-0.4.10/font.css" rel="stylesheet"><link href="../deps/Roboto_Slab-0.4.10/font.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"><script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="ExperimentRegistry Constructor — makeExperimentRegistry"><meta name="description" content="makeExperimentRegistry constructs a special Registry which
 is suitable for the definition of large scale computer experiments.
 Each experiments consists of a Problem and an Algorithm.
 These can be parametrized with addExperiments to actually define computational
@@ -184,7 +184,7 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Adding algorithm 'a1'</span>
 <span class="r-in"><span><span class="fu"><a href="addAlgorithm.html">addAlgorithm</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span>, <span class="st">"a2"</span>, fun <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">job</span>, <span class="va">data</span>, <span class="va">instance</span>, <span class="va">...</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html" class="external-link">median</a></span><span class="op">(</span><span class="va">instance</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Adding algorithm 'a2'</span>
-<span class="r-in"><span><span class="va">ids</span> <span class="op">=</span> <span class="fu"><a href="addExperiments.html">addExperiments</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>p1 <span class="op">=</span> <span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/J.html" class="external-link">CJ</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span>, mean <span class="op">=</span> <span class="op">-</span><span class="fl">2</span><span class="op">:</span><span class="fl">2</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">ids</span> <span class="op">=</span> <span class="fu"><a href="addExperiments.html">addExperiments</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>p1 <span class="op">=</span> <span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/data.table/man/J.html" class="external-link">CJ</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">100</span><span class="op">)</span>, mean <span class="op">=</span> <span class="op">-</span><span class="fl">2</span><span class="op">:</span><span class="fl">2</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Adding 40 experiments ('p1'[40] x 'a1'[1] x repls[1]) ...</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Adding 40 experiments ('p1'[40] x 'a2'[1] x repls[1]) ...</span>
 <span class="r-in"><span></span></span>
@@ -251,6 +251,7 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 39:     59      p1        a2    50     2     3</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 40:     60      p1        a2    50     2     4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     job.id problem algorithm     n  mean    sd</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      &lt;int&gt;  &lt;char&gt;    &lt;char&gt; &lt;num&gt; &lt;int&gt; &lt;int&gt;</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Submit jobs</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="submitJobs.html">submitJobs</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
@@ -261,13 +262,13 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-in"><span><span class="co"># Reduce the results of algorithm a1</span></span></span>
 <span class="r-in"><span><span class="va">ids.mean</span> <span class="op">=</span> <span class="fu"><a href="findJobs.html">findExperiments</a></span><span class="op">(</span>algo.name <span class="op">=</span> <span class="st">"a1"</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="reduceResults.html">reduceResults</a></span><span class="op">(</span><span class="va">ids.mean</span>, fun <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">aggr</span>, <span class="va">res</span>, <span class="va">...</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">aggr</span>, <span class="va">res</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -1.98469630 -2.06425842 -1.57829424 -1.54085458 -0.83801253 -1.03200064</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] -0.83647536 -0.22817269  0.05267963  0.32063225  0.66292266 -0.84019695</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  0.76945500  1.50780734  0.75043834  0.46866849  2.03726918  2.33474808</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [19]  2.52740967  0.94690547 -1.84481475 -1.93439574 -2.08432449 -1.74409243</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [25] -0.93044354 -0.86852550 -0.91917690 -0.99852013  0.06523844  0.23235414</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31] -0.57542230 -0.51186562  1.03348915  0.96256306  0.86972725  1.11434707</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [37]  1.95386875  2.03545162  2.07137075  2.33586686</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] -2.00073766 -1.83988515 -2.19491590 -1.88744748 -1.16661898 -1.01586977</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] -0.52913619 -0.63585094 -0.09331735  0.11880843  0.22120996  1.22939842</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [13]  1.00632897  1.26918801  2.11616673  1.81935795  1.90243597  1.93950861</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [19]  2.33621891  2.81313094 -1.95745534 -2.29431806 -1.82269005 -1.80889629</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [25] -0.91933173 -1.03820621 -0.95531362 -1.49309041  0.09203207  0.05360571</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [31]  0.04219920 -0.11534443  1.14488890  0.83504259  0.82821428  1.07835718</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [37]  2.06274541  2.28296085  2.26426388  1.74159301</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Join info table with all results and calculate mean of results</span></span></span>
 <span class="r-in"><span><span class="co"># grouped by n and algorithm</span></span></span>
@@ -278,10 +279,10 @@ Default is <code>TRUE</code>.</p></dd>
 <span class="r-in"><span><span class="va">tab</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>mres <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span><span class="op">)</span>, by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"n"</span>, <span class="st">"algorithm"</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        n algorithm        mres</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    &lt;num&gt;    &lt;char&gt;       &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:    50        a1  0.07179872</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:   100        a1  0.01313478</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:    50        a2  0.01729868</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:   100        a2 -0.07154361</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:    50        a1 0.270398674</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:   100        a1 0.001062847</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:    50        a2 0.068935673</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:   100        a2 0.020262158</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -293,7 +294,7 @@ Default is <code>TRUE</code>.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

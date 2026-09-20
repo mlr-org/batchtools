@@ -5,7 +5,7 @@
       fontURL: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/output/chtml/fonts/woff-v2"
     }
   };
-</script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet"><link href="../deps/JetBrains_Mono-0.4.10/font.css" rel="stylesheet"><link href="../deps/Roboto_Slab-0.4.10/font.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"><script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Submit Jobs to the Batch Systems — submitJobs"><meta name="description" content="Submits defined jobs to the batch system.
+</script><script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.10/font.css" rel="stylesheet"><link href="../deps/JetBrains_Mono-0.4.10/font.css" rel="stylesheet"><link href="../deps/Roboto_Slab-0.4.10/font.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet"><link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet"><script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Submit Jobs to the Batch Systems — submitJobs"><meta name="description" content="Submits defined jobs to the batch system.
 After submitting the jobs, you can use waitForJobs to wait for the
 termination of jobs or call reduceResultsList/reduceResults
 to collect partial results.
@@ -81,7 +81,7 @@ The progress can be monitored with <code><a href="getStatus.html">getStatus</a><
 
 <dl><dt id="arg-ids">ids<a class="anchor" aria-label="anchor" href="#arg-ids"></a></dt>
 <dd><p>[<code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> or <code>integer</code>]<br>
-A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> (or <code><a href="https://rdatatable.gitlab.io/data.table/reference/data.table.html" class="external-link">data.table</a></code>)
+A <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></code> (or <code><a href="https://rdrr.io/pkg/data.table/man/data.table.html" class="external-link">data.table</a></code>)
 with a column named “job.id”.
 Alternatively, you may also pass a vector of integerish job ids.
 If not set, defaults to the return value of <code><a href="findJobs.html">findNotSubmitted</a></code>.
@@ -114,7 +114,7 @@ Registry. If not explicitly passed, uses the default registry (see <code><a href
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>[<code><a href="https://rdatatable.gitlab.io/data.table/reference/data.table.html" class="external-link">data.table</a></code>] with columns “job.id” and “chunk”.</p>
+    <p>[<code><a href="https://rdrr.io/pkg/data.table/man/data.table.html" class="external-link">data.table</a></code>] with columns “job.id” and “chunk”.</p>
     </div>
     <div class="section level2">
     <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
@@ -263,7 +263,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu"><a href="waitForJobs.html">waitForJobs</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-11-26 10:23:40:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2026-09-20 14:25:51:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 10 ( 50.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 10 ( 50.0%)</span>
@@ -278,7 +278,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu">submitJobs</span><span class="op">(</span><span class="fu"><a href="findJobs.html">findErrors</a></span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Submitting 5 jobs in 5 chunks using cluster functions 'Interactive' ...</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-11-26 10:23:41:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2026-09-20 14:25:51:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 10 ( 50.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 10 ( 50.0%)</span>
@@ -292,7 +292,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="fu">submitJobs</span><span class="op">(</span><span class="va">ids</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Submitting 10 jobs in 10 chunks using cluster functions 'Interactive' ...</span>
 <span class="r-in"><span><span class="fu"><a href="getStatus.html">getStatus</a></span><span class="op">(</span>reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2025-11-26 10:23:41:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Status for 20 jobs at 2026-09-20 14:25:52:</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   Submitted    : 20 (100.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Queued    :  0 (  0.0%)</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   -- Started   : 20 (100.0%)</span>
@@ -373,7 +373,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-in"><span><span class="va">fun</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">n</span>, <span class="va">p</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/colSums.html" class="external-link">colMeans</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">*</span><span class="va">p</span><span class="op">)</span>, <span class="va">n</span>, <span class="va">p</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Arguments to fun:</span></span></span>
-<span class="r-in"><span><span class="va">args</span> <span class="op">=</span> <span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://rdatatable.gitlab.io/data.table/reference/J.html" class="external-link">CJ</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1e4</span>, <span class="fl">1e5</span><span class="op">)</span>, p <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span> <span class="co"># like expand.grid()</span></span></span>
+<span class="r-in"><span><span class="va">args</span> <span class="op">=</span> <span class="fu">data.table</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/data.table/man/J.html" class="external-link">CJ</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1e4</span>, <span class="fl">1e5</span><span class="op">)</span>, p <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">50</span><span class="op">)</span><span class="op">)</span> <span class="co"># like expand.grid()</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">args</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;n, p&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        n     p</span>
@@ -400,20 +400,20 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    job.id mem.used     n     p</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt; &lt;num&gt; &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9000 1e+04    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9008 1e+04    50</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9006 1e+05    10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9010 1e+05    50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 163.9911 1e+04    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 163.9919 1e+04    50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 163.9918 1e+05    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 163.9922 1e+05    50</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Combine job info with results -&gt; each job is aggregated using mean()</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="unwrap.html">unwrap</a></span><span class="op">(</span><span class="fu"><a href="JoinTables.html">ijoin</a></span><span class="op">(</span><span class="va">info</span>, <span class="fu"><a href="reduceResultsList.html">reduceResultsDataTable</a></span><span class="op">(</span>fun <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">res</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>res <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span><span class="op">)</span>, reg <span class="op">=</span> <span class="va">tmp</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Key: &lt;job.id&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    job.id mem.used     n     p       res</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     &lt;int&gt;    &lt;num&gt; &lt;num&gt; &lt;num&gt;     &lt;num&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 162.9000 1e+04    10 0.4974659</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 162.9008 1e+04    50 0.4999527</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 162.9006 1e+05    10 0.4996599</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 162.9010 1e+05    50 0.5000197</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1:      1 163.9911 1e+04    10 0.5005778</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2:      2 163.9919 1e+04    50 0.4992527</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3:      3 163.9918 1e+05    10 0.5000026</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4:      4 163.9922 1e+05    50 0.4999301</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co">### Example 3: Multicore execution on the slave</span></span></span>
 <span class="r-in"><span><span class="va">tmp</span> <span class="op">=</span> <span class="fu"><a href="makeRegistry.html">makeRegistry</a></span><span class="op">(</span>file.dir <span class="op">=</span> <span class="cn">NA</span>, make.default <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
@@ -457,7 +457,7 @@ You have to do this manually via <code><a href="https://rdrr.io/r/base/library.h
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

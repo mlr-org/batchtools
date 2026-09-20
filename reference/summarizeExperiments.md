@@ -21,7 +21,7 @@ summarizeExperiments(
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) or
   `integer`\]  
   A [`data.frame`](https://rdrr.io/r/base/data.frame.html) (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html))
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html))
   with a column named “job.id”. Alternatively, you may also pass a
   vector of integerish job ids. If not set, defaults to all jobs.
   Invalid ids are ignored.
@@ -39,7 +39,7 @@ summarizeExperiments(
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 of frequencies.
 
 ## See also

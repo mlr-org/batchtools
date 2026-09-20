@@ -28,7 +28,7 @@ addExperiments(
   \[named list of
   [`data.frame`](https://rdrr.io/r/base/data.frame.html)\]  
   Named list of data frames (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)).
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)).
   The name must match the problem name while the column names correspond
   to parameters of the problem. If `NULL`, experiments for all defined
   problems without any parameters are added.
@@ -36,10 +36,10 @@ addExperiments(
 - algo.designs:
 
   \[named list of
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
-  or [`data.frame`](https://rdrr.io/r/base/data.frame.html)\]  
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html) or
+  [`data.frame`](https://rdrr.io/r/base/data.frame.html)\]  
   Named list of data frames (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)).
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)).
   The name must match the algorithm name while the column names
   correspond to parameters of the algorithm. If `NULL`, experiments for
   all defined algorithms without any parameters are added.
@@ -67,7 +67,7 @@ addExperiments(
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 with ids of added jobs stored in column “job.id”.
 
 ## Note
@@ -80,7 +80,7 @@ variables if the following conditions hold:
 1.  R version is \< 4.0.0
 
 2.  The design is passed as a `data.frame`, not a
-    [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
+    [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)
     or [`tibble`](https://tibble.tidyverse.org/reference/tibble.html).
 
 3.  The option “stringsAsFactors” is not set or set to `TRUE`.
@@ -120,6 +120,11 @@ addAlgorithm("deviation", fun = fun, reg = tmp)
 
 # define problem and algorithm designs
 library(data.table)
+#> 
+#> Attaching package: ‘data.table’
+#> The following object is masked from ‘package:base’:
+#> 
+#>     %notin%
 prob.designs = algo.designs = list()
 prob.designs$rnorm = CJ(n = 100, mean = -1:1, sd = 1:5)
 prob.designs$rexp = data.table(n = 100, lambda = 1:5)
@@ -206,4 +211,5 @@ unwrap(getJobPars(reg = tmp))
 #> 59:     59    rexp deviation   100    NA    NA      4   <NA>
 #> 60:     60    rexp deviation   100    NA    NA      5   <NA>
 #>     job.id problem algorithm     n  mean    sd lambda method
+#>      <int>  <char>    <char> <num> <int> <int>  <int> <char>
 ```

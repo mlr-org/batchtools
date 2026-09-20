@@ -62,7 +62,7 @@ submitJobs(reg = tmp)
 waitForJobs(reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 5 jobs at 2025-11-26 10:23:39:
+#> Status for 5 jobs at 2026-09-20 14:25:50:
 #>   Submitted    : 5 (100.0%)
 #>   -- Queued    : 0 (  0.0%)
 #>   -- Started   : 5 (100.0%)
@@ -77,7 +77,7 @@ writeLines(getLog(ids[1], reg = tmp))
 #> ### [bt]: Setting working directory to '/home/runner/work/batchtools/batchtools/docs/reference'
 #> ### [bt]: Memory measurement disabled
 #> ### [bt]: Starting job [batchtools job.id=1]
-#> ### [bt]: Setting seed to 15724 ...
+#> ### [bt]: Setting seed to 5192 ...
 #> 
 #> ### [bt]: Job terminated successfully [batchtools job.id=1]
 #> ### [bt]: Calculation finished!

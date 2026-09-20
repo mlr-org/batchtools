@@ -2,11 +2,11 @@
 
 Applies a function on the results of your finished jobs and thereby
 collects them in a [`list`](https://rdrr.io/r/base/list.html) or
-[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html).
-The later requires the provided function to return a list (or
-`data.frame`) of scalar values. See
-[`rbindlist`](https://rdatatable.gitlab.io/data.table/reference/rbindlist.html)
-for features and limitations of the aggregation.
+[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html). The
+later requires the provided function to return a list (or `data.frame`)
+of scalar values. See
+[`rbindlist`](https://rdrr.io/pkg/data.table/man/rbindlist.html) for
+features and limitations of the aggregation.
 
 If not all jobs are terminated, the respective result will be `NULL`.
 
@@ -37,7 +37,7 @@ reduceResultsDataTable(
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) or
   `integer`\]  
   A [`data.frame`](https://rdrr.io/r/base/data.frame.html) (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html))
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html))
   with a column named “job.id”. Alternatively, you may also pass a
   vector of integerish job ids. If not set, defaults to the return value
   of [`findDone`](https://batchtools.mlr-org.com/reference/findJobs.md).
@@ -73,10 +73,10 @@ reduceResultsDataTable(
 
 `reduceResultsList` returns a list of the results in the same order as
 the provided ids. `reduceResultsDataTable` returns a
-[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
-with columns “job.id” and additional result columns created via
-[`rbindlist`](https://rdatatable.gitlab.io/data.table/reference/rbindlist.html),
-sorted by “job.id”.
+[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html) with
+columns “job.id” and additional result columns created via
+[`rbindlist`](https://rdrr.io/pkg/data.table/man/rbindlist.html), sorted
+by “job.id”.
 
 ## Note
 
@@ -250,67 +250,69 @@ unwrap(res, sep = ".")
 #> 59:     59    rexp deviation         100             NA           NA
 #> 60:     60    rexp deviation         100             NA           NA
 #>     job.id problem algorithm prob.pars.n prob.pars.mean prob.pars.sd
-#>     prob.pars.lambda algo.pars.method  result.res
-#>                <int>           <char>       <num>
-#>  1:               NA             mean -1.04646282
-#>  2:               NA           median -0.98817924
-#>  3:               NA             mean -0.98147041
-#>  4:               NA           median -0.71572615
-#>  5:               NA             mean -0.98960904
-#>  6:               NA           median -1.11634029
-#>  7:               NA             mean -1.14794720
-#>  8:               NA           median -1.02123201
-#>  9:               NA             mean -0.89159135
-#> 10:               NA           median -1.06412662
-#> 11:               NA             mean -0.08169784
-#> 12:               NA           median  0.03735153
-#> 13:               NA             mean  0.18104742
-#> 14:               NA           median -0.05614924
-#> 15:               NA             mean  0.37579240
-#> 16:               NA           median -0.38072242
-#> 17:               NA             mean -0.08521923
-#> 18:               NA           median  0.45398916
-#> 19:               NA             mean -0.10045811
-#> 20:               NA           median -0.19449791
-#> 21:               NA             mean  0.78673194
-#> 22:               NA           median  0.92504454
-#> 23:               NA             mean  0.99697058
-#> 24:               NA           median  1.03385331
-#> 25:               NA             mean  1.37526204
-#> 26:               NA           median  1.74294928
-#> 27:               NA             mean  0.17279893
-#> 28:               NA           median  1.01658972
-#> 29:               NA             mean  0.49471707
-#> 30:               NA           median  1.38093271
-#> 31:               NA             <NA>  1.13768364
-#> 32:               NA             <NA>  2.03163450
-#> 33:               NA             <NA>  2.80540249
-#> 34:               NA             <NA>  3.94875073
-#> 35:               NA             <NA>  5.02220675
-#> 36:               NA             <NA>  0.96765081
-#> 37:               NA             <NA>  1.99891667
-#> 38:               NA             <NA>  3.02944762
-#> 39:               NA             <NA>  3.42663032
-#> 40:               NA             <NA>  4.99733553
-#> 41:               NA             <NA>  0.92584637
-#> 42:               NA             <NA>  1.80978848
-#> 43:               NA             <NA>  2.67116574
-#> 44:               NA             <NA>  4.39848556
-#> 45:               NA             <NA>  5.97208145
-#> 46:                1             mean  1.04594946
-#> 47:                1           median  0.66706890
-#> 48:                2             mean  0.51960923
-#> 49:                2           median  0.32914477
-#> 50:                3             mean  0.31718344
-#> 51:                3           median  0.25721963
-#> 52:                4             mean  0.25805113
-#> 53:                4           median  0.17615608
-#> 54:                5             mean  0.21049678
-#> 55:                5           median  0.15978693
-#> 56:                1             <NA>  0.81653996
-#> 57:                2             <NA>  0.50625858
-#> 58:                3             <NA>  0.33797922
-#> 59:                4             <NA>  0.21772032
-#> 60:                5             <NA>  0.19084039
-#>     prob.pars.lambda algo.pars.method  result.res
+#>      <int>  <char>    <char>       <num>          <int>        <int>
+#>     prob.pars.lambda algo.pars.method   result.res
+#>                <int>           <char>        <num>
+#>  1:               NA             mean -1.092018851
+#>  2:               NA           median -0.863780644
+#>  3:               NA             mean -1.084890423
+#>  4:               NA           median -1.505171392
+#>  5:               NA             mean -1.381319138
+#>  6:               NA           median -1.341051423
+#>  7:               NA             mean -1.188083630
+#>  8:               NA           median  0.029939562
+#>  9:               NA             mean -0.987419910
+#> 10:               NA           median -1.673002281
+#> 11:               NA             mean  0.007267359
+#> 12:               NA           median  0.127401909
+#> 13:               NA             mean -0.179617350
+#> 14:               NA           median  0.046125736
+#> 15:               NA             mean -0.057929853
+#> 16:               NA           median  0.140366680
+#> 17:               NA             mean -0.388849478
+#> 18:               NA           median -1.207701427
+#> 19:               NA             mean  0.042334184
+#> 20:               NA           median -0.381653696
+#> 21:               NA             mean  0.907293957
+#> 22:               NA           median  1.033215601
+#> 23:               NA             mean  1.020619322
+#> 24:               NA           median  0.876104940
+#> 25:               NA             mean  0.679306393
+#> 26:               NA           median  0.977987955
+#> 27:               NA             mean  0.675594915
+#> 28:               NA           median  1.366615131
+#> 29:               NA             mean  1.189950292
+#> 30:               NA           median  0.263092706
+#> 31:               NA             <NA>  1.040412625
+#> 32:               NA             <NA>  2.392300899
+#> 33:               NA             <NA>  3.042692900
+#> 34:               NA             <NA>  4.263774294
+#> 35:               NA             <NA>  5.296092785
+#> 36:               NA             <NA>  1.071510659
+#> 37:               NA             <NA>  2.072637870
+#> 38:               NA             <NA>  3.153765268
+#> 39:               NA             <NA>  3.419489935
+#> 40:               NA             <NA>  5.558785921
+#> 41:               NA             <NA>  1.012589238
+#> 42:               NA             <NA>  2.015986064
+#> 43:               NA             <NA>  3.170339048
+#> 44:               NA             <NA>  4.281061044
+#> 45:               NA             <NA>  4.988645174
+#> 46:                1             mean  0.945622941
+#> 47:                1           median  0.619859008
+#> 48:                2             mean  0.446385905
+#> 49:                2           median  0.420682183
+#> 50:                3             mean  0.397613162
+#> 51:                3           median  0.306781776
+#> 52:                4             mean  0.277069910
+#> 53:                4           median  0.165324176
+#> 54:                5             mean  0.182106656
+#> 55:                5           median  0.144752066
+#> 56:                1             <NA>  0.942306695
+#> 57:                2             <NA>  0.453601669
+#> 58:                3             <NA>  0.292487926
+#> 59:                4             <NA>  0.210416655
+#> 60:                5             <NA>  0.189556888
+#>     prob.pars.lambda algo.pars.method   result.res
+#>                <int>           <char>        <num>
 ```

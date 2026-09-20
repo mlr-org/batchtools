@@ -27,7 +27,7 @@ submitJobs(
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) or
   `integer`\]  
   A [`data.frame`](https://rdrr.io/r/base/data.frame.html) (or
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html))
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html))
   with a column named “job.id”. Alternatively, you may also pass a
   vector of integerish job ids. If not set, defaults to the return value
   of
@@ -67,7 +67,7 @@ submitJobs(
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 with columns “job.id” and “chunk”.
 
 ## Note
@@ -261,7 +261,7 @@ submitJobs(ids, reg = tmp)
 waitForJobs(ids, reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2025-11-26 10:23:40:
+#> Status for 20 jobs at 2026-09-20 14:25:51:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -276,7 +276,7 @@ file.create(fn)
 submitJobs(findErrors(ids, reg = tmp), reg = tmp)
 #> Submitting 5 jobs in 5 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2025-11-26 10:23:41:
+#> Status for 20 jobs at 2026-09-20 14:25:51:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -290,7 +290,7 @@ ids = findNotSubmitted(reg = tmp)
 submitJobs(ids, reg = tmp)
 #> Submitting 10 jobs in 10 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2025-11-26 10:23:41:
+#> Status for 20 jobs at 2026-09-20 14:25:52:
 #>   Submitted    : 20 (100.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 20 (100.0%)
@@ -398,20 +398,20 @@ print(unwrap(info))
 #> Key: <job.id>
 #>    job.id mem.used     n     p
 #>     <int>    <num> <num> <num>
-#> 1:      1 162.9000 1e+04    10
-#> 2:      2 162.9008 1e+04    50
-#> 3:      3 162.9006 1e+05    10
-#> 4:      4 162.9010 1e+05    50
+#> 1:      1 163.9911 1e+04    10
+#> 2:      2 163.9919 1e+04    50
+#> 3:      3 163.9918 1e+05    10
+#> 4:      4 163.9922 1e+05    50
 
 # Combine job info with results -> each job is aggregated using mean()
 unwrap(ijoin(info, reduceResultsDataTable(fun = function(res) list(res = mean(res)), reg = tmp)))
 #> Key: <job.id>
 #>    job.id mem.used     n     p       res
 #>     <int>    <num> <num> <num>     <num>
-#> 1:      1 162.9000 1e+04    10 0.4974659
-#> 2:      2 162.9008 1e+04    50 0.4999527
-#> 3:      3 162.9006 1e+05    10 0.4996599
-#> 4:      4 162.9010 1e+05    50 0.5000197
+#> 1:      1 163.9911 1e+04    10 0.5005778
+#> 2:      2 163.9919 1e+04    50 0.4992527
+#> 3:      3 163.9918 1e+05    10 0.5000026
+#> 4:      4 163.9922 1e+05    50 0.4999301
 
 ### Example 3: Multicore execution on the slave
 tmp = makeRegistry(file.dir = NA, make.default = FALSE)

@@ -24,7 +24,7 @@ flatten(x, cols = NULL, sep = NULL)
 - x:
 
   \[[`data.frame`](https://rdrr.io/r/base/data.frame.html) \|
-  [`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]  
+  [`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]  
   Data frame to flatten.
 
 - cols:
@@ -43,7 +43,7 @@ flatten(x, cols = NULL, sep = NULL)
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\].
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\].
 
 ## Note
 

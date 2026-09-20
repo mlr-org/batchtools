@@ -137,7 +137,7 @@ print(job)
 #>     pars: active binding
 #>     reader: RDSReader, R6
 #>     resources: list
-#>     seed: 25315
+#>     seed: 15284
 
 # Get the parameters:
 job$pars
@@ -156,6 +156,6 @@ job$resources
 
 # Execute the job locally:
 execJob(job)
-#> ### [bt]: Setting seed to 25315 ...
+#> ### [bt]: Setting seed to 15284 ...
 #> [1] 100
 ```

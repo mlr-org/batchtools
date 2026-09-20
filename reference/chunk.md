@@ -137,6 +137,7 @@ ids[, chunk := chunk(job.id, chunk.size = 10)]
 #> 24:     24     3
 #> 25:     25     3
 #>     job.id chunk
+#>      <int> <int>
 print(ids[, .N, by = chunk])
 #>    chunk     N
 #>    <int> <int>
@@ -175,6 +176,7 @@ ids[, chunk := chunk(job.id, n.chunks = 4)]
 #> 24:     24     1
 #> 25:     25     1
 #>     job.id chunk
+#>      <int> <int>
 print(ids[, .N, by = chunk])
 #>    chunk     N
 #>    <int> <int>
@@ -238,6 +240,7 @@ ids[, chunk := chunk(job.id, chunk.size = 5), by = "problem"]
 #> 26:     26   prob2      algo     4
 #> 27:     27   prob2      algo     4
 #>     job.id problem algorithm chunk
+#>      <int>  <char>    <char> <int>
 ids[, chunk := .GRP, by = c("problem", "chunk")]
 #> Key: <job.id>
 #>     job.id problem algorithm chunk
@@ -270,6 +273,7 @@ ids[, chunk := .GRP, by = c("problem", "chunk")]
 #> 26:     26   prob2      algo     6
 #> 27:     27   prob2      algo     6
 #>     job.id problem algorithm chunk
+#>      <int>  <char>    <char> <int>
 dcast(ids, chunk ~ problem)
 #> Using 'chunk' as value column. Use 'value.var' to override
 #> Warning: 'fun.aggregate' is NULL, but found duplicate row/column combinations, so defaulting to length(). That is, the variables [chunk, problem] used in 'formula' do not uniquely identify rows in the input 'data'. In such cases, 'fun.aggregate' is used to derive a single representative value for each combination in the output data.table, for example by summing or averaging (fun.aggregate=sum or fun.aggregate=mean, respectively). Check the resulting table for values larger than 1 to see which combinations were not unique. See ?dcast.data.table for more details.

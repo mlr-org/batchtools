@@ -296,7 +296,7 @@ print(tmp)
 #>   File dir : /tmp/batchtools-example/reg
 #>   Work dir : /home/runner/work/batchtools/batchtools/docs/reference
 #>   Jobs     : 0
-#>   Seed     : 32563
+#>   Seed     : 5075
 #>   Writeable: TRUE
 
 # Set cluster functions to interactive mode and start jobs in external R sessions

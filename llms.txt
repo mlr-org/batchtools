@@ -32,6 +32,7 @@ Main features:
 Install the stable version from CRAN:
 
 ``` r
+
 install.packages("batchtools")
 ```
 
@@ -39,6 +40,7 @@ For the development version, use
 [devtools](https://cran.r-project.org/package=devtools):
 
 ``` r
+
 devtools::install_github("mlr-org/batchtools")
 ```
 

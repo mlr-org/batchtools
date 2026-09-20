@@ -49,6 +49,7 @@ respective constructor
 [`makeClusterFunctionsSocket()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsSocket.md):
 
 ``` r
+
 reg = makeRegistry(NA)
 reg$cluster.functions = makeClusterFunctionsSocket(2)
 ```
@@ -68,6 +69,7 @@ environment variable `DEBUGME` to `batchtools` before you load the
 `batchtools` package:
 
 ``` r
+
 Sys.setenv(DEBUGME = "batchtools")
 library(batchtools)
 ```
@@ -106,6 +108,7 @@ cluster function implementation, you would generate a file with the
 following content:
 
 ``` r
+
 cluster.functions = makeClusterFunctionsInteractive()
 ```
 
@@ -118,6 +121,7 @@ working directory in your home directory and you always want to load the
 `checkmate` package on the nodes, you can just append these lines:
 
 ``` r
+
 work.dir = "~"
 packages = union(packages, "checkmate")
 ```
@@ -190,7 +194,7 @@ back.
   by just passing a `data.frame` or `data.table` to
   [`addExperiments()`](https://batchtools.mlr-org.com/reference/addExperiments.md).
   For exhaustive designs, use
-  [`data.table::CJ()`](https://rdatatable.gitlab.io/data.table/reference/J.html).
+  [`data.table::CJ()`](https://rdrr.io/pkg/data.table/man/J.html).
 
 ### Template changes
 
@@ -234,27 +238,27 @@ BatchJobs/BatchExperiments functions to their counterparts in
 batchtools. The table does not cover functions which are (a) used only
 internally in BatchJobs and (b) functions which have not been renamed.
 
-| BatchJobs                |                                                   batchtools                                                   |
-|--------------------------|:--------------------------------------------------------------------------------------------------------------:|
-| `addRegistryPackages`    |                         Set `reg$packages` or `reg$namespaces`, call saveRegistry()\]                          |
-| `addRegistrySourceDirs`  |                                                       \-                                                       |
-| `addRegistrySourceFiles` |                                     Set `reg$source`, call saveRegistry()                                      |
-| `batchExpandGrid`        |                                 `batchMap(..., args = CJ(x = 1:3, y = 1:10))`                                  |
-| `batchMapQuick`          |                      [`btmapply()`](https://batchtools.mlr-org.com/reference/btlapply.md)                      |
-| `batchReduceResults`     |                                                       \-                                                       |
-| `batchUnexport`          |                   [`batchExport()`](https://batchtools.mlr-org.com/reference/batchExport.md)                   |
-| `filterResults`          |                                                       \-                                                       |
-| `getJobIds`              |                      [`findJobs()`](https://batchtools.mlr-org.com/reference/findJobs.md)                      |
-| `getJobInfo`             |                  [`getJobStatus()`](https://batchtools.mlr-org.com/reference/getJobTable.md)                   |
-| `getJob`                 |                    [`makeJob()`](https://batchtools.mlr-org.com/reference/JobExperiment.md)                    |
-| `getJobParamDf`          |                   [`getJobPars()`](https://batchtools.mlr-org.com/reference/getJobTable.md)                    |
-| `loadResults`            |             [`reduceResultsList()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md)             |
-| `reduceResultsDataFrame` |          [`reduceResultsDataTable()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md)           |
-| `reduceResultsMatrix`    | [`reduceResultsList()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md) + `do.call(rbind, res)` |
-| `reduceResultsVector`    |          [`reduceResultsDataTable()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md)           |
-| `setJobFunction`         |                                                       \-                                                       |
-| `setJobNames`            |                                                       \-                                                       |
-| `showStatus`             |                     [`getStatus()`](https://batchtools.mlr-org.com/reference/getStatus.md)                     |
+| BatchJobs | batchtools |
+|----|:--:|
+| `addRegistryPackages` | Set `reg$packages` or `reg$namespaces`, call saveRegistry()\] |
+| `addRegistrySourceDirs` | \- |
+| `addRegistrySourceFiles` | Set `reg$source`, call saveRegistry() |
+| `batchExpandGrid` | `batchMap(..., args = CJ(x = 1:3, y = 1:10))` |
+| `batchMapQuick` | [`btmapply()`](https://batchtools.mlr-org.com/reference/btlapply.md) |
+| `batchReduceResults` | \- |
+| `batchUnexport` | [`batchExport()`](https://batchtools.mlr-org.com/reference/batchExport.md) |
+| `filterResults` | \- |
+| `getJobIds` | [`findJobs()`](https://batchtools.mlr-org.com/reference/findJobs.md) |
+| `getJobInfo` | [`getJobStatus()`](https://batchtools.mlr-org.com/reference/getJobTable.md) |
+| `getJob` | [`makeJob()`](https://batchtools.mlr-org.com/reference/JobExperiment.md) |
+| `getJobParamDf` | [`getJobPars()`](https://batchtools.mlr-org.com/reference/getJobTable.md) |
+| `loadResults` | [`reduceResultsList()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md) |
+| `reduceResultsDataFrame` | [`reduceResultsDataTable()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md) |
+| `reduceResultsMatrix` | [`reduceResultsList()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md) + `do.call(rbind, res)` |
+| `reduceResultsVector` | [`reduceResultsDataTable()`](https://batchtools.mlr-org.com/reference/reduceResultsList.md) |
+| `setJobFunction` | \- |
+| `setJobNames` | \- |
+| `showStatus` | [`getStatus()`](https://batchtools.mlr-org.com/reference/getStatus.md) |
 
 ## Example 1: Approximation of \\\pi\\
 
@@ -277,6 +281,7 @@ temp directory of the system and gets automatically deleted if you close
 the R session.
 
 ``` r
+
 reg = makeRegistry(file.dir = NA, seed = 1)
 ```
 
@@ -299,6 +304,7 @@ calculated and the fraction of points in the unit circle (\\d \leq 1\\)
 is returned.
 
 ``` r
+
 piApprox = function(n) {
   nums = matrix(runif(2 * n), ncol = 2)
   d = sqrt(nums[, 1]^2 + nums[, 2]^2)
@@ -316,6 +322,7 @@ each doing a MC simulation with \\10^5\\ jobs. We use
 define the jobs (note that this does not yet start the calculation):
 
 ``` r
+
 batchMap(fun = piApprox, n = rep(1e5, 10))
 ```
 
@@ -330,6 +337,7 @@ IDs can be retrieved with
 which returns a data.frame with all relevant information:
 
 ``` r
+
 names(getJobTable())
 ```
 
@@ -346,6 +354,7 @@ as an arbitrary list of resource requirements, which are to be handled
 by the cluster back end.
 
 ``` r
+
 submitJobs(resources = list(walltime = 3600, memory = 1024))
 ```
 
@@ -357,10 +366,11 @@ submitted jobs can be checked with
 [`getStatus()`](https://batchtools.mlr-org.com/reference/getStatus.md).
 
 ``` r
+
 getStatus()
 ```
 
-    ## Status for 10 jobs at 2025-11-26 10:23:49:
+    ## Status for 10 jobs at 2026-09-20 14:25:59:
     ##   Submitted    : 10 (100.0%)
     ##   -- Queued    :  0 (  0.0%)
     ##   -- Started   : 10 (100.0%)
@@ -383,18 +393,21 @@ which is a version of [`Reduce()`](https://rdrr.io/r/base/funprog.html)
 from the base package for registry objects.
 
 ``` r
+
 waitForJobs()
 ```
 
     ## [1] TRUE
 
 ``` r
+
 mean(sapply(1:10, loadResult))
 ```
 
     ## [1] 3.140652
 
 ``` r
+
 reduceResults(function(x, y) x + y) / 10
 ```
 
@@ -413,6 +426,7 @@ and then uses
 to return the results.
 
 ``` r
+
 res = btlapply(rep(1e5, 10), piApprox)
 mean(unlist(res))
 ```
@@ -436,6 +450,7 @@ detailed explanation. Again, we use a temporary registry and make it the
 default registry.
 
 ``` r
+
 library(batchtools)
 reg = makeExperimentRegistry(file.dir = NA, seed = 1)
 ```
@@ -465,6 +480,7 @@ returns the indices of the respective training and test set for a split
 with `100 * ratio`% of the observations being in the test set:
 
 ``` r
+
 subsample = function(data, job, ratio, ...) {
   n = nrow(data)
   train = sample(n, floor(n * ratio))
@@ -478,6 +494,7 @@ files the problem to the file system and the problem gets recorded in
 the registry.
 
 ``` r
+
 data("iris", package = "datasets")
 addProblem(name = "iris", data = iris, fun = subsample, seed = 42)
 ```
@@ -505,6 +522,7 @@ system for later retrieval. Firstly, we create an algorithm which
 applies a support vector machine:
 
 ``` r
+
 svm.wrapper = function(data, job, instance, ...) {
   library("e1071")
   mod = svm(Species ~ ., data = data[instance$train, ], ...)
@@ -519,6 +537,7 @@ addAlgorithm(name = "svm", fun = svm.wrapper)
 Secondly, a random forest of classification trees:
 
 ``` r
+
 forest.wrapper = function(data, job, instance, ...) {
   library("ranger")
   mod = ranger(Species ~ ., data = data[instance$train, ], write.forest = TRUE)
@@ -543,12 +562,14 @@ corresponding functions are stored on the file system.
 Defined problems and algorithms can be queried with:
 
 ``` r
+
 reg$problems
 ```
 
     ## [1] "iris"
 
 ``` r
+
 reg$algorithms
 ```
 
@@ -576,6 +597,7 @@ distinct job. How often each of these jobs should be computed can be
 determined with the argument `repls`.
 
 ``` r
+
 # problem design: try two values for the ratio parameter
 pdes = list(iris = data.table(ratio = c(0.67, 0.9)))
 
@@ -600,6 +622,7 @@ returns a table which gives a quick overview over all defined
 experiments.
 
 ``` r
+
 summarizeExperiments()
 ```
 
@@ -609,6 +632,7 @@ summarizeExperiments()
     ## 2:    iris    forest     30
 
 ``` r
+
 summarizeExperiments(by = c("problem", "algorithm", "ratio"))
 ```
 
@@ -643,6 +667,7 @@ the other with a random forest and the parameter `ntree = 1000`. The
 selected experiment IDs are then passed to testJob.
 
 ``` r
+
 id1 = head(findExperiments(algo.name = "svm"), 1)
 print(id1)
 ```
@@ -653,6 +678,7 @@ print(id1)
     ## 1:      1
 
 ``` r
+
 id2 = head(findExperiments(algo.name = "forest", algo.pars = (ntree == 1000)), 1)
 print(id2)
 ```
@@ -663,6 +689,7 @@ print(id2)
     ## 1:     71
 
 ``` r
+
 testJob(id = id1)
 ```
 
@@ -676,6 +703,7 @@ testJob(id = id1)
     ##   virginica       0          1        19
 
 ``` r
+
 testJob(id = id2)
 ```
 
@@ -700,12 +728,14 @@ and wait for all jobs to terminate using
 [`waitForJobs()`](https://batchtools.mlr-org.com/reference/waitForJobs.md).
 
 ``` r
+
 submitJobs()
 ```
 
     ## Submitting 90 jobs in 90 chunks using cluster functions 'Interactive' ...
 
 ``` r
+
 waitForJobs()
 ```
 
@@ -716,6 +746,7 @@ After jobs are finished, the results can be collected with
 where we directly extract the mean misclassification error:
 
 ``` r
+
 reduce = function(res) list(mce = (sum(res) - sum(diag(res))) / sum(res))
 results = unwrap(reduceResultsDataTable(fun = reduce))
 head(results)
@@ -737,6 +768,7 @@ one of the join helpers (see
 provided by `batchtools` (here, we use an inner join):
 
 ``` r
+
 pars = unwrap(getJobPars())
 tab = ijoin(pars, results)
 head(tab)
@@ -762,6 +794,7 @@ the table to jobs where the ratio is `0.67` and group by algorithm the
 algorithm hyperparameters:
 
 ``` r
+
 tab[ratio == 0.67, list(mmce = mean(mce)),
   by = c("algorithm", "kernel", "epsilon", "ntree")]
 ```
@@ -802,6 +835,7 @@ By way of illustration here is a small example. First, we create a
 temporary registry.
 
 ``` r
+
 library(batchtools)
 reg = makeRegistry(file.dir = NA, seed = 1)
 ```
@@ -810,6 +844,7 @@ Ten jobs are created, one will trow a warning and two of them will raise
 an exception.
 
 ``` r
+
 flakeyFunction <- function(value) {
   if (value == 5) warning("Just a simple warning")
   if (value %in% c(2, 9)) stop("Ooops.")
@@ -823,6 +858,7 @@ batchMap(flakeyFunction, 1:10)
 Now that the jobs are defined, we can test jobs independently:
 
 ``` r
+
 testJob(id = 1)
 ```
 
@@ -834,6 +870,7 @@ In this case, testing the job with ID = 1 provides the appropriate
 result but testing the job with ID = 2 leads to an error:
 
 ``` r
+
 as.character(try(testJob(id = 2)))
 ```
 
@@ -846,6 +883,7 @@ We ignore the error here, and just assume everything looks fine and
 submit all jobs.
 
 ``` r
+
 submitJobs()
 ```
 
@@ -858,6 +896,7 @@ submitJobs()
     ## Error in (function (value)  : Ooops.
 
 ``` r
+
 waitForJobs()
 ```
 
@@ -869,10 +908,11 @@ the first thing to do is to run
 to display a summary of the current state of the system.
 
 ``` r
+
 getStatus()
 ```
 
-    ## Status for 10 jobs at 2025-11-26 10:23:53:
+    ## Status for 10 jobs at 2026-09-20 14:26:03:
     ##   Submitted    : 10 (100.0%)
     ##   -- Queued    :  0 (  0.0%)
     ##   -- Started   : 10 (100.0%)
@@ -889,6 +929,7 @@ and to retrieve the actual error message, we can use
 [`getErrorMessages()`](https://batchtools.mlr-org.com/reference/getErrorMessages.md).
 
 ``` r
+
 findErrors()
 ```
 
@@ -899,6 +940,7 @@ findErrors()
     ## 2:      9
 
 ``` r
+
 getErrorMessages()
 ```
 
@@ -916,6 +958,7 @@ opens a pager or use
 the log as character vector:
 
 ``` r
+
 tail(getLog(id = 9))
 ```
 
@@ -930,6 +973,7 @@ You can also grep for messages (output suppressed in this vignette for
 technical reasons):
 
 ``` r
+
 grepLogs(pattern = "simple", ignore.case = TRUE)
 ```
 

@@ -68,7 +68,7 @@ batchMap(
 
 ## Value
 
-\[[`data.table`](https://rdatatable.gitlab.io/data.table/reference/data.table.html)\]
+\[[`data.table`](https://rdrr.io/pkg/data.table/man/data.table.html)\]
 with ids of added jobs stored in column “job.id”.
 
 ## See also
@@ -100,7 +100,7 @@ getJobPars(reg = tmp)
 #>  9:      9 <list[1]>
 #> 10:     10 <list[1]>
 testJob(6, reg = tmp) # 100 + 6^2 = 136
-#> ### [bt]: Setting seed to 23542 ...
+#> ### [bt]: Setting seed to 12787 ...
 #> [1] 136
 
 # vector recycling
@@ -141,6 +141,6 @@ getJobPars(reg = tmp)
 #> 8:      8 <list[2]>
 #> 9:      9 <list[2]>
 testJob(6, reg = tmp)
-#> ### [bt]: Setting seed to 13241 ...
+#> ### [bt]: Setting seed to 8571 ...
 #> [1] "b 3"
 ```
