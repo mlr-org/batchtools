@@ -14,7 +14,7 @@ Package website: [release](https://batchtools.mlr-org.com/) | [dev](https://batc
 [![Mattermost](https://img.shields.io/badge/chat-mattermost-orange.svg)](https://lmmisld-lmu-stats-slds.srv.mwn.de/mlr_invite/)
 <!-- badges: end -->
 
-As a successor of the packages [BatchJobs](https://github.com/tudo-r/BatchJobs) and [BatchExperiments](https://github.com/tudo-r/Batchexperiments), batchtools provides a parallel implementation of Map for high performance computing systems managed by schedulers like Slurm, Sun Grid Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker Swarm (see the setup section in the [vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)).
+As a successor of the packages [BatchJobs](https://github.com/tudo-r/BatchJobs) and [BatchExperiments](https://github.com/tudo-r/Batchexperiments), batchtools provides a parallel implementation of Map for high performance computing systems managed by schedulers like Slurm, Sun Grid Engine, OpenLava, TORQUE/OpenPBS, Load Sharing Facility (LSF) or Docker Swarm (see the setup section in the [vignette](https://batchtools.mlr-org.com/articles/batchtools.html)).
 
 Main features:
 
@@ -37,7 +37,7 @@ devtools::install_github("mlr-org/batchtools")
 ```
 
 Next, you need to setup `batchtools` for your HPC (it will run sequentially otherwise).
-See the [vignette](https://mlr-org.github.io/batchtools/articles/batchtools.html#setup) for instructions.
+See the [vignette](https://batchtools.mlr-org.com/articles/batchtools.html) for instructions.
 
 ## Why batchtools?
 The development of [BatchJobs](https://github.com/tudo-r/BatchJobs/) and [BatchExperiments](https://github.com/tudo-r/Batchexperiments) is discontinued for the following reasons:
@@ -46,15 +46,14 @@ The development of [BatchJobs](https://github.com/tudo-r/BatchJobs/) and [BatchE
 * Data base issues: Although we invested weeks to mitigate issues with locks of the SQLite data base or file system (staged queries, file system timeouts, ...), `BatchJobs` kept working unreliable on some systems with high latency under certain conditions. This made `BatchJobs` unusable for many users.
 
 [BatchJobs](https://github.com/tudo-r/BatchJobs/) and [BatchExperiments](https://github.com/tudo-r/Batchexperiments) will remain on CRAN, but new features are unlikely to be ported back.
-The [vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration) contains a section comparing the packages.
+The [vignette](https://batchtools.mlr-org.com/articles/batchtools.html) contains a section comparing the packages.
 
 
 ## Resources
-* [NEWS](https://batchtools.mlr-org.com/batchtools/news/)
-* [Function reference](https://batchtools.mlr-org.com/batchtools/reference/)
-* [Vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html)
+* [Function reference](https://batchtools.mlr-org.com/reference/)
+* [Vignette](https://batchtools.mlr-org.com/articles/batchtools.html)
 * [JOSS Paper](https://doi.org/10.21105/joss.00135): Short paper on batchtools. Please cite this if you use batchtools.
-* [Paper on BatchJobs/BatchExperiments](https://www.jstatsoft.org/v64/i11): The described concept still holds for batchtools and most examples work analogously (see the [vignette](https://batchtools.mlr-org.com/batchtools/articles/batchtools.html#migration) for differences between the packages).
+* [Paper on BatchJobs/BatchExperiments](https://www.jstatsoft.org/v64/i11): The described concept still holds for batchtools and most examples work analogously (see the [vignette](https://batchtools.mlr-org.com/articles/batchtools.html) for differences between the packages).
 
 ## Citation
 Please cite the [JOSS paper](https://doi.org/10.21105/joss.00135) using the following BibTeX entry:

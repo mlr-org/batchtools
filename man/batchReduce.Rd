@@ -33,7 +33,7 @@ A list of additional arguments passed to \code{fun}.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+[\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 }
 \description{
 A parallel and asynchronous \code{\link[base]{Reduce}} for batch systems.

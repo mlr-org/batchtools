@@ -22,7 +22,7 @@
 #'   You may pass a named character vector to merge on columns with different names in \code{x} and
 #'   \code{y}: \code{by = c("x.id" = "y.id")} will match \code{x}'s \dQuote{x.id} column with \code{y}\'s
 #'   \dQuote{y.id} column.
-#' @return [\code{\link{data.table}}] with key identical to \code{by}.
+#' @return [\code{\link[data.table]{data.table}}] with key identical to \code{by}.
 #' @export
 #' @examples
 #' \dontshow{ batchtools:::example_push_temp(1) }

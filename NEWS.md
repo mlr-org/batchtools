@@ -1,3 +1,7 @@
+# batchtools 0.9.18
+
+* Fixed CRAN issues with documentation
+
 # batchtools 0.9.17
 
 * Fixed a bug in the finalizer of `ClusterFunctionsMulticore`.

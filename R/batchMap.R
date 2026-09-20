@@ -26,7 +26,7 @@
 #'   Mutually exclusive with \code{...}.
 #' @template more.args
 #' @template reg
-#' @return [\code{\link{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
+#' @return [\code{\link[data.table]{data.table}}] with ids of added jobs stored in column \dQuote{job.id}.
 #' @export
 #' @seealso \code{\link{batchReduce}}
 #' @examples

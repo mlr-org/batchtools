@@ -18,7 +18,7 @@ Invalid ids are ignored.}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] of job ids which have been reset.
+[\code{\link[data.table]{data.table}}] of job ids which have been reset.
   See \code{\link{JoinTables}} for examples on working with job tables.
 }
 \description{

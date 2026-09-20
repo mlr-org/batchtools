@@ -45,7 +45,7 @@ Usually safe to set to \code{0} to disable the heuristic, e.g. if you are workin
 }
 \description{
 Cluster functions for Univa Grid Engine / Oracle Grid Engine /
-Sun Grid Engine (\url{https://www.univa.com/}).
+Sun Grid Engine (\url{https://altair.com/hpc-cloud-applications/}).
 
 Job files are created based on the brew template \code{template}. This
 file is processed with brew and then submitted to the queue using the
@@ -66,6 +66,7 @@ Array jobs are currently not supported.
 Other ClusterFunctions: 
 \code{\link{makeClusterFunctions}()},
 \code{\link{makeClusterFunctionsDocker}()},
+\code{\link{makeClusterFunctionsHyperQueue}()},
 \code{\link{makeClusterFunctionsInteractive}()},
 \code{\link{makeClusterFunctionsLSF}()},
 \code{\link{makeClusterFunctionsMulticore}()},

@@ -22,7 +22,7 @@
 #'   This may lead to name clashes.
 #'   If you provide \code{sep}, the variable column name will be constructed as
 #'   \dQuote{[column name of x][sep][inner name]}.
-#' @return [\code{\link{data.table}}].
+#' @return [\code{\link[data.table]{data.table}}].
 #' @export
 #' @examples
 #' x = data.table::data.table(

@@ -10,7 +10,7 @@
 #' @templateVar ids.default findOnSystem
 #' @template ids
 #' @template reg
-#' @return [\code{\link{data.table}}] with columns \dQuote{job.id}, the corresponding \dQuote{batch.id} and
+#' @return [\code{\link[data.table]{data.table}}] with columns \dQuote{job.id}, the corresponding \dQuote{batch.id} and
 #'   the logical flag \dQuote{killed} indicating success.
 #' @family debug
 #' @export

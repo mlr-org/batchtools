@@ -11,7 +11,7 @@
 #' @templateVar ids.default all
 #' @template ids
 #' @template reg
-#' @return [\code{\link{data.table}}] with the following columns (not necessarily in this order):
+#' @return [\code{\link[data.table]{data.table}}] with the following columns (not necessarily in this order):
 #'   \describe{
 #'     \item{job.id}{Unique Job ID as integer.}
 #'     \item{submitted}{Time the job was submitted to the batch system as \code{\link[base]{POSIXct}}.}

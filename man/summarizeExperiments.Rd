@@ -25,7 +25,7 @@ Split the resulting table by columns of \code{\link{getJobPars}}.}
 Registry. If not explicitly passed, uses the last created registry.}
 }
 \value{
-[\code{\link{data.table}}] of frequencies.
+[\code{\link[data.table]{data.table}}] of frequencies.
 }
 \description{
 Returns a frequency table of defined experiments.

@@ -48,7 +48,7 @@ You may pass a named character vector to merge on columns with different names i
 Keep columns of \code{y} which are not in \code{x}?}
 }
 \value{
-[\code{\link{data.table}}] with key identical to \code{by}.
+[\code{\link[data.table]{data.table}}] with key identical to \code{by}.
 }
 \description{
 These helper functions perform join operations on data tables.

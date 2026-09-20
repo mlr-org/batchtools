@@ -40,7 +40,7 @@ extractLog = function(log, id) {
 #' @template reg
 #' @export
 #' @family debug
-#' @return [\code{\link{data.table}}] with columns \dQuote{job.id} and \dQuote{message}.
+#' @return [\code{\link[data.table]{data.table}}] with columns \dQuote{job.id} and \dQuote{message}.
 grepLogs = function(ids = NULL, pattern, ignore.case = FALSE, fixed = FALSE, reg = getDefaultRegistry()) {
   assertRegistry(reg, sync = TRUE)
   assertString(pattern, min.chars = 1L)

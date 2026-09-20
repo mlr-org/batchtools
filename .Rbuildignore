@@ -10,4 +10,7 @@
 ^docs$
 ^paper$
 ^_pkgdown\.yml$
+^README.RMD$
 ^.github$
+registry/
+^\.lintr$

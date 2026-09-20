@@ -105,7 +105,7 @@
 #'   If not provided (\code{NULL}), tries to read the value (number/function) from the configuration file (stored in \code{reg$sleep}) or defaults to
 #'   a function with exponential backoff between 5 and 120 seconds.
 #' @template reg
-#' @return [\code{\link{data.table}}] with columns \dQuote{job.id} and \dQuote{chunk}.
+#' @return [\code{\link[data.table]{data.table}}] with columns \dQuote{job.id} and \dQuote{chunk}.
 #' @export
 #' @examples
 #' \dontshow{ batchtools:::example_push_temp(3) }

@@ -9,7 +9,7 @@
 #' You may also pass \code{n} here to determine the number of parallel jobs which is then used
 #' in a simple Longest Processing Time (LPT) algorithm to give an estimate for the parallel runtime.
 #'
-#' @param tab [\code{\link{data.table}}]\cr
+#' @param tab [\code{\link[data.table]{data.table}}]\cr
 #'   Table with column \dQuote{job.id} and additional columns to predict the runtime.
 #'   Observed runtimes will be looked up in the registry and serve as dependent variable.
 #'   All columns in \code{tab} except \dQuote{job.id} will be passed to \code{\link[ranger]{ranger}} as
@@ -18,7 +18,7 @@
 #'   Additional parameters passed to \code{\link[ranger]{ranger}}. Ignored for the \code{print} method.
 #' @template reg
 #' @return [\code{RuntimeEstimate}] which is a \code{list} with two named elements:
-#'  \dQuote{runtimes} is a \code{\link{data.table}} with columns \dQuote{job.id},
+#'  \dQuote{runtimes} is a \code{\link[data.table]{data.table}} with columns \dQuote{job.id},
 #'  \dQuote{runtime} (in seconds) and \dQuote{type} (\dQuote{estimated} if runtime is estimated,
 #'  \dQuote{observed} if runtime was observed).
 #'  The other element of the list named \dQuote{model}] contains the fitted random forest object.

@@ -26,7 +26,7 @@ for jobs which have not terminated. Default is \code{FALSE}}
 Registry. If not explicitly passed, uses the default registry (see \code{\link{setDefaultRegistry}}).}
 }
 \value{
-[\code{\link{data.table}}] with columns \dQuote{job.id}, \dQuote{terminated} (logical),
+[\code{\link[data.table]{data.table}}] with columns \dQuote{job.id}, \dQuote{terminated} (logical),
   \dQuote{error} (logical) and \dQuote{message} (string).
 }
 \description{

@@ -99,7 +99,7 @@ Whitelist of replication numbers. If not provided, all replications are matched.
 Return jobs which are tagged with any of the tags provided.}
 }
 \value{
-[\code{\link{data.table}}] with column \dQuote{job.id} containing matched jobs.
+[\code{\link[data.table]{data.table}}] with column \dQuote{job.id} containing matched jobs.
 }
 \description{
 These functions are used to find and filter jobs, depending on either their parameters (\code{findJobs} and

@@ -16,7 +16,7 @@
 #' @templateVar ids.default all
 #' @template ids
 #' @template reg
-#' @return [\code{\link{data.table}}] with column \dQuote{job.id} containing matched jobs.
+#' @return [\code{\link[data.table]{data.table}}] with column \dQuote{job.id} containing matched jobs.
 #' @seealso \code{\link{getStatus}} \code{\link{JoinTables}}
 #' @export
 #' @examples
