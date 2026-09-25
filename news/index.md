@@ -2,10 +2,19 @@
 
 ## batchtools 0.9.19
 
+- New
+  [`makeClusterFunctionsHyperQueue()`](https://batchtools.mlr-org.com/reference/makeClusterFunctionsHyperQueue.md)
+  to submit jobs via the HyperQueue meta-scheduler
+  ([\#322](https://github.com/mlr-org/batchtools/issues/322),
+  [@be-marc](https://github.com/be-marc)).
 - Fixed a bug in `Worker` initialization where the script path was not
   assigned for remote SSH hosts, causing
   [`runOSCommand()`](https://batchtools.mlr-org.com/reference/runOSCommand.md)
   to fail with NULL argument.
+- Fixed a faulty length check on the output of `docker` in the
+  `submitJob()` of `ClusterFunctionsDocker`
+  ([\#328](https://github.com/mlr-org/batchtools/issues/328),
+  [@sims1253](https://github.com/sims1253)).
 
 ## batchtools 0.9.18
 

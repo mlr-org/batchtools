@@ -136,7 +136,7 @@ btlapply(1:3, function(x) x^2)
 #> 
 btmapply(function(x, y, z) x + y + z, x = 1:3, y = 1:3, more.args = list(z = 1), simplify = TRUE)
 #> No readable configuration file found
-#> Created registry in '/tmp/Rtmp5nuZc2/registry1cbc3c65504a' using cluster functions 'Interactive'
+#> Created registry in '/tmp/RtmpLPJZKo/registry1ca111b912a6' using cluster functions 'Interactive'
 #> Adding 3 jobs ...
 #> Submitting 3 jobs in 3 chunks using cluster functions 'Interactive' ...
 #> [1] 3 5 7
