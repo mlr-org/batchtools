@@ -14,7 +14,7 @@ sweepRegistry = function(reg = getDefaultRegistry()) {
 
   submitted = reg$status[.findSubmitted(reg = reg), c("job.id", "job.hash")]
   obsolete = chsetdiff(
-    list.files(dir(reg, "results"), full.names = TRUE),
+    list.files(dir(reg, "results"), pattern = "\\.rds$", full.names = TRUE),
     getResultFiles(reg, submitted)
   )
   if (length(obsolete)) {
@@ -31,7 +31,7 @@ sweepRegistry = function(reg = getDefaultRegistry()) {
     fs::file_delete(obsolete)
   }
 
-  obsolete = list.files(dir(reg, "jobs"), pattern = "\\.rds", full.names = TRUE)
+  obsolete = list.files(dir(reg, "jobs"), pattern = "\\.rds$", full.names = TRUE)
   if (length(obsolete)) {
     info("Removing %i obsolete job collection files ...", length(obsolete))
     fs::file_delete(obsolete)
