@@ -370,7 +370,7 @@ submitted jobs can be checked with
 getStatus()
 ```
 
-    ## Status for 10 jobs at 2026-09-25 16:24:43:
+    ## Status for 10 jobs at 2026-09-25 16:28:01:
     ##   Submitted    : 10 (100.0%)
     ##   -- Queued    :  0 (  0.0%)
     ##   -- Started   : 10 (100.0%)
@@ -912,7 +912,7 @@ to display a summary of the current state of the system.
 getStatus()
 ```
 
-    ## Status for 10 jobs at 2026-09-25 16:24:47:
+    ## Status for 10 jobs at 2026-09-25 16:28:05:
     ##   Submitted    : 10 (100.0%)
     ##   -- Queued    :  0 (  0.0%)
     ##   -- Started   : 10 (100.0%)
