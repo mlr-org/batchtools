@@ -1,6 +1,8 @@
-# batchtools 0.9.19 
+# batchtools 0.9.19
 
+* New `makeClusterFunctionsHyperQueue()` to submit jobs via the HyperQueue meta-scheduler (#322, @be-marc).
 * Fixed a bug in `Worker` initialization where the script path was not assigned for remote SSH hosts, causing `runOSCommand()` to fail with NULL argument.
+* Fixed a faulty length check on the output of `docker` in the `submitJob()` of `ClusterFunctionsDocker` (#328, @sims1253).
 
 # batchtools 0.9.18
 
