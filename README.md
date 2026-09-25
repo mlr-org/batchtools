@@ -46,11 +46,10 @@ Install the stable version from CRAN:
 install.packages("batchtools")
 ```
 
-For the development version, use
-[devtools](https://cran.r-project.org/package=devtools):
+For the development version, use [pak](https://pak.r-lib.org/):
 
 ``` r
-devtools::install_github("mlr-org/batchtools")
+pak::pak("mlr-org/batchtools")
 ```
 
 Next, you need to setup `batchtools` for your HPC (it will run
