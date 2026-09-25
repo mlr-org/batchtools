@@ -62,7 +62,7 @@ submitJobs(reg = tmp)
 waitForJobs(reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 5 jobs at 2026-09-21 15:10:45:
+#> Status for 5 jobs at 2026-09-25 16:21:00:
 #>   Submitted    : 5 (100.0%)
 #>   -- Queued    : 0 (  0.0%)
 #>   -- Started   : 5 (100.0%)
@@ -72,7 +72,7 @@ getStatus(reg = tmp)
 #>   ---- Expired : 0 (  0.0%)
 
 writeLines(getLog(ids[1], reg = tmp))
-#> ### [bt]: This is batchtools v0.9.18
+#> ### [bt]: This is batchtools v0.9.19
 #> ### [bt]: Starting calculation of 1 jobs
 #> ### [bt]: Setting working directory to '/home/runner/work/batchtools/batchtools/docs/reference'
 #> ### [bt]: Memory measurement disabled

@@ -50,7 +50,7 @@ batchMap(identity, 1:2, reg = tmp)
 #> Adding 2 jobs ...
 jc = makeJobCollection(1:2, reg = tmp)
 doJobCollection(jc)
-#> ### [bt]: This is batchtools v0.9.18
+#> ### [bt]: This is batchtools v0.9.19
 #> ### [bt]: Starting calculation of 2 jobs
 #> ### [bt]: Setting working directory to '/home/runner/work/batchtools/batchtools/docs/reference'
 #> ### [bt]: Memory measurement disabled

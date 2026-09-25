@@ -1,5 +1,12 @@
 # Changelog
 
+## batchtools 0.9.19
+
+- Fixed a bug in `Worker` initialization where the script path was not
+  assigned for remote SSH hosts, causing
+  [`runOSCommand()`](https://batchtools.mlr-org.com/reference/runOSCommand.md)
+  to fail with NULL argument.
+
 ## batchtools 0.9.18
 
 CRAN release: 2025-08-20

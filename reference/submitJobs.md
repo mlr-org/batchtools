@@ -261,7 +261,7 @@ submitJobs(ids, reg = tmp)
 waitForJobs(ids, reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-09-21 15:10:46:
+#> Status for 20 jobs at 2026-09-25 16:21:01:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -276,7 +276,7 @@ file.create(fn)
 submitJobs(findErrors(ids, reg = tmp), reg = tmp)
 #> Submitting 5 jobs in 5 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-09-21 15:10:46:
+#> Status for 20 jobs at 2026-09-25 16:21:01:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -290,7 +290,7 @@ ids = findNotSubmitted(reg = tmp)
 submitJobs(ids, reg = tmp)
 #> Submitting 10 jobs in 10 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-09-21 15:10:47:
+#> Status for 20 jobs at 2026-09-25 16:21:02:
 #>   Submitted    : 20 (100.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 20 (100.0%)
@@ -398,8 +398,8 @@ print(unwrap(info))
 #> Key: <job.id>
 #>    job.id mem.used     n     p
 #>     <int>    <num> <num> <num>
-#> 1:      1 163.9912 1e+04    10
-#> 2:      2 163.9920 1e+04    50
+#> 1:      1 163.9913 1e+04    10
+#> 2:      2 163.9921 1e+04    50
 #> 3:      3 163.9919 1e+05    10
 #> 4:      4 163.9923 1e+05    50
 
@@ -408,8 +408,8 @@ unwrap(ijoin(info, reduceResultsDataTable(fun = function(res) list(res = mean(re
 #> Key: <job.id>
 #>    job.id mem.used     n     p       res
 #>     <int>    <num> <num> <num>     <num>
-#> 1:      1 163.9912 1e+04    10 0.5005778
-#> 2:      2 163.9920 1e+04    50 0.4992527
+#> 1:      1 163.9913 1e+04    10 0.5005778
+#> 2:      2 163.9921 1e+04    50 0.4992527
 #> 3:      3 163.9919 1e+05    10 0.5000026
 #> 4:      4 163.9923 1e+05    50 0.4999301
 

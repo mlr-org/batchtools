@@ -3,7 +3,7 @@ pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   batchtools: batchtools.html
-last_built: 2026-09-21T15:09Z
+last_built: 2026-09-25T16:19Z
 urls:
   reference: https://batchtools.mlr-org.com/reference
   article: https://batchtools.mlr-org.com/articles
