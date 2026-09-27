@@ -67,7 +67,7 @@ makeClusterFunctionsDocker = function(image, docker.args = character(0L), image.
         return(makeSubmitJobResult(status = 1L, batch.id = NA_character_, msg = no.res.msg))
       return(cfHandleUnknownSubmitError(stri_flatten(cmd, " "), res$exit.code, res$output))
     } else {
-      if (length(res$output != 1L)) {
+      if (length(res$output) != 1L) {
         matches = which(stri_detect_regex(res$output, "^[[:alnum:]]{64}$"))
         if (length(matches) != 1L)
           stopf("Command '%s' did not return a long UUID identitfier", stri_flatten(cmd, " "))
