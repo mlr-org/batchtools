@@ -62,7 +62,7 @@ submitJobs(reg = tmp)
 waitForJobs(reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 5 jobs at 2026-09-30 18:10:40:
+#> Status for 5 jobs at 2026-09-30 18:14:09:
 #>   Submitted    : 5 (100.0%)
 #>   -- Queued    : 0 (  0.0%)
 #>   -- Started   : 5 (100.0%)

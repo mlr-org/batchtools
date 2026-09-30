@@ -15,6 +15,10 @@
   `submitJob()` of `ClusterFunctionsDocker`
   ([\#328](https://github.com/mlr-org/batchtools/issues/328),
   [@sims1253](https://github.com/sims1253)).
+- Fixed documentation regarding `store.job.collection` behavior in
+  [`makeClusterFunctions()`](https://batchtools.mlr-org.com/reference/makeClusterFunctions.md)
+  ([\#333](https://github.com/mlr-org/batchtools/issues/333),
+  [@n3orma](https://github.com/n3orma))
 
 ## batchtools 0.9.18
 
