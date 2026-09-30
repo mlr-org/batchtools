@@ -33,7 +33,7 @@
 #'   Default is \code{NA} for no array support.
 #' @param store.job.collection [\code{logical(1)}]\cr
 #'   Flag to indicate that the cluster function implementation of \code{submitJob} can not directly handle \code{\link{JobCollection}} objects.
-#'   If set to \code{FALSE}, the \code{\link{JobCollection}} is serialized to the file system before submitting the job.
+#'   If set to \code{TRUE}, the \code{\link{JobCollection}} is serialized to the file system before submitting the job.
 #' @param store.job.files [\code{logical(1)}]\cr
 #'   Flag to indicate that job files need to be stored in the file directory.
 #'   If set to \code{FALSE} (default), the job file is created in a temporary directory, otherwise (or if the debug mode is enabled) in
