@@ -66,7 +66,8 @@ makeClusterFunctionsSlurm = function(template = "slurm", array.jobs = TRUE, node
       return(cfHandleUnknownSubmitError("sbatch", res$exit.code, res$output))
     }
 
-    id = stri_split_fixed(output[1L], " ")[[1L]][4L]
+    submitted = grep("^Submitted batch job", stri_split_fixed(output, '\n')[[1L]], value = TRUE)
+    id = stri_split_fixed(submitted, " ")[[1L]][4L]
     if (jc$array.jobs) {
       if (!array.jobs)
         stop("Array jobs not supported by cluster function")
