@@ -42,9 +42,28 @@ file_mtime = function(x) {
   fs::file_info(x)$modification_time
 }
 
-writeRDS = function(object, file, compress = "gzip") {
-  file_remove(file)
-  saveRDS(object, file = file, version = 2L, compress = compress)
-  waitForFile(file, 300)
+writeRDS = function(object, file, compress = "gzip", wait = 300) {
+  # (a) Write to *.rds.tmp
+  tmp_file <- sprintf("%s.tmp", file)
+  saveRDS(object, file = tmp_file, version = 2L, compress = compress)
+
+  # (b) Wait for it to be found
+  if (wait > 0) waitForFile(tmp_file, timeout = wait)
+
+  # (c) Assert file exists
+  if (!file_test("-f", tmp_file)) {
+    stop(sprintf("Failed to save to temporary RDS file: %s", sQuote(tmp_file)))
+  }
+
+  # (d) Remove old file, if it exists
+  if (file_test("-f", file)) file_remove(file)
+
+  # (e) Rename *.rds.tmp to *.rds
+  file.rename(tmp_file, file)
+  if (!file_test("-f", file)) {
+    stop(sprintf("Failed to rename temporarily saved RDS file: %s -> %s",
+      sQuote(tmp_file), sQuote(file)))
+  }
+  
   invisible(TRUE)
 }
