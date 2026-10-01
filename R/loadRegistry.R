@@ -3,6 +3,10 @@
 #' @description
 #' Loads a registry from its \code{file.dir}.
 #'
+#' Objects previously exported with \code{\link{batchExport}} are automatically
+#' loaded into the global environment when the registry is loaded. Existing
+#' objects with the same names may be overwritten.
+#'
 #' Multiple R sessions accessing the same registry simultaneously can lead to database inconsistencies.
 #' This is especially dangerous if the same \code{file.dir} is accessed from multiple machines, e.g. via a mount.
 #'
