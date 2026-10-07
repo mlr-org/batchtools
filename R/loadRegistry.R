@@ -7,6 +7,15 @@
 #' loaded into the global environment when the registry is loaded. Existing
 #' objects with the same names may be overwritten.
 #'
+#' The configuration file specified by \code{conf.file} is sourced each time
+#' the registry is loaded. This also reloads the cluster functions configured
+#' there, so changes to the configuration or to a referenced scheduler template
+#' can be applied by calling \code{loadRegistry()} again instead of recreating
+#' the registry.
+#'
+#' Only jobs submitted with \code{\link{submitJobs}} after reloading the registry
+#' use the updated configuration. Jobs that have already been submitted or
+#' queued are not affected.
 #' Multiple R sessions accessing the same registry simultaneously can lead to database inconsistencies.
 #' This is especially dangerous if the same \code{file.dir} is accessed from multiple machines, e.g. via a mount.
 #'

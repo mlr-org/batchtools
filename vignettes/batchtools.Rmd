@@ -86,9 +86,6 @@ In order to set the cluster function implementation, you would generate a file w
 cluster.functions = makeClusterFunctionsInteractive()
 ```
 The configuration file is parsed whenever you create or load a `?Registry`.
-After editing the configuration file or a scheduler template referenced by it,
-reload the registry with `loadRegistry()` to apply the changes without removing
-and recreating the registry.
 It is sourced inside of your registry which has the advantage that you can (a) access all of the parameters which are passed to makeRegistry() and (b) you can also directly change them.
 Lets say you always want your working directory in your home directory and you always want to load the `checkmate` package on the nodes, you can just append these lines:
 ```{r, eval = FALSE}
