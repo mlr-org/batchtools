@@ -93,7 +93,7 @@ waitForJobs(reg = tmp)
 
 tab = getStatus(reg = tmp)
 print(tab)
-#> Status for 5 jobs at 2026-10-01 16:19:06:
+#> Status for 5 jobs at 2026-10-07 14:32:58:
 #>   Submitted    : 4 ( 80.0%)
 #>   -- Queued    : 0 (  0.0%)
 #>   -- Started   : 4 ( 80.0%)
@@ -112,5 +112,5 @@ str(tab)
 #>  $ running  : int 0
 #>  $ expired  : int 0
 #>  $ system   : int 0
-#>  - attr(*, ".internal.selfref")=<pointer: 0x560e4eb09ee0> 
+#>  - attr(*, ".internal.selfref")=<pointer: 0x55694df23ee0> 
 ```

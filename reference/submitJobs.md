@@ -261,7 +261,7 @@ submitJobs(ids, reg = tmp)
 waitForJobs(ids, reg = tmp)
 #> [1] FALSE
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-10-01 16:19:39:
+#> Status for 20 jobs at 2026-10-07 14:33:29:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -276,7 +276,7 @@ file.create(fn)
 submitJobs(findErrors(ids, reg = tmp), reg = tmp)
 #> Submitting 5 jobs in 5 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-10-01 16:19:39:
+#> Status for 20 jobs at 2026-10-07 14:33:29:
 #>   Submitted    : 10 ( 50.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 10 ( 50.0%)
@@ -290,7 +290,7 @@ ids = findNotSubmitted(reg = tmp)
 submitJobs(ids, reg = tmp)
 #> Submitting 10 jobs in 10 chunks using cluster functions 'Interactive' ...
 getStatus(reg = tmp)
-#> Status for 20 jobs at 2026-10-01 16:19:40:
+#> Status for 20 jobs at 2026-10-07 14:33:29:
 #>   Submitted    : 20 (100.0%)
 #>   -- Queued    :  0 (  0.0%)
 #>   -- Started   : 20 (100.0%)
